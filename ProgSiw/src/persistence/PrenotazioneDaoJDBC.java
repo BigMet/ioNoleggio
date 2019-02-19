@@ -180,7 +180,8 @@ public class PrenotazioneDaoJDBC implements PrenotazioneDao {
 	}
 
 	@Override
-	public Prenotazione findByCredential(int idCliente) {
+	public List<Prenotazione> findByCredential(int idCliente) {
+		List<Prenotazione> prenotazioni = new LinkedList<>();
 		Connection connection = this.dataSource.getConnection();
 		Prenotazione prenotazione = null;
 		try {
@@ -204,6 +205,7 @@ public class PrenotazioneDaoJDBC implements PrenotazioneDao {
 				
 				secs = result.getDate("dataFinePrenotazione").getTime();
 				prenotazione.setDataFinePrenotazione(new java.util.Date(secs));
+				prenotazioni.add(prenotazione);
 				
 			}
 		} catch (SQLException e) {
@@ -215,7 +217,7 @@ public class PrenotazioneDaoJDBC implements PrenotazioneDao {
 				throw new PersistenceException(e.getMessage());
 			}
 		}	
-		return prenotazione;
+		return prenotazioni;
 	}
 
 }

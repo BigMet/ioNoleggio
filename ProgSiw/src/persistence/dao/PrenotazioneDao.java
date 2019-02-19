@@ -12,6 +12,6 @@ public interface PrenotazioneDao {
 	public void update(Prenotazione prenotazione); //Update
 	public void delete(Prenotazione prenotazione); //Delete	
 	
-	public Prenotazione findByCredential(int idCliente);
+	public List<Prenotazione> findByCredential(int idCliente);
 //	public void setPassword(Prenotazione prenotazione, String password);
 }
