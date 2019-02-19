@@ -52,7 +52,7 @@
 
     <!-- the username -->
     <h1>
-            ${nome} essucami lo scapocchio 
+            ${nome}
            	
           </h1>
 
