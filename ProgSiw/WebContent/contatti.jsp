@@ -32,22 +32,6 @@
         <div class="dorne-load"></div>
     </div>
 
-    <!-- ***** Search Form Area ***** -->
-    <div class="dorne-search-form d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="search-close-btn" id="closeBtn">
-                        <i class="pe-7s-close-circle" aria-hidden="true"></i>
-                    </div>
-                    <form action="#" method="get">
-                        <input type="search" name="caviarSearch" id="search" placeholder="Search Your Desire Destinations or Events">
-                        <input type="submit" class="d-none" value="submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     
     <!-- ***** Header Area Start ***** -->
@@ -123,11 +107,7 @@
             </div>
             </div>
         </div>
-        <!-- Map Area -->
-        <div class="dorne-map-area equal-height">
-            <div id="googleMap"></div>
-        </div>
-    </div>
+        
     <!-- ***** Contact Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
