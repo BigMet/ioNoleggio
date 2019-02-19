@@ -80,7 +80,7 @@
 <!-- <!--  <div style="float:left; display:block; width:150px; height:150px;">
   --> 
   
-  <a href="prenotazioni.jsp" class="btn-toolset">
+  <a href="prenotazioniCliente" class="btn-toolset">
   <strong>Le mie prenotazioni</strong>
    </a> 
   <!-- </div> -->

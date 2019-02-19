@@ -181,19 +181,19 @@ public class PrenotazioneDaoJDBC implements PrenotazioneDao {
 
 	@Override
 	public List<Prenotazione> findByCredential(int idCliente) {
-		List<Prenotazione> prenotazioni = new LinkedList<>();
 		Connection connection = this.dataSource.getConnection();
-		Prenotazione prenotazione = null;
+		List<Prenotazione> prenotazioni = new LinkedList<>();
 		try {
+			Prenotazione prenotazione;
 			PreparedStatement statement;
-			String query = "select * from prenotazione where idcliente = ?";
+			String query = "select * from prenotazione where idutente=?";
 			statement = connection.prepareStatement(query);
-			statement.setInt(1,idCliente);
+			statement.setInt(1, idCliente);
 			ResultSet result = statement.executeQuery();
-			if (result.next()) {
+			while (result.next()) {
 				prenotazione = new Prenotazione();
 				prenotazione.setIdPrenotazione(result.getInt("id"));
-				prenotazione.setIdCliente(result.getInt("idcliente"));
+				prenotazione.setIdCliente(result.getInt("idutente"));
 				prenotazione.setTarga(result.getString("targa"));
 				prenotazione.setPrezzo(result.getFloat("prezzo"));
 				
@@ -205,18 +205,18 @@ public class PrenotazioneDaoJDBC implements PrenotazioneDao {
 				
 				secs = result.getDate("dataFinePrenotazione").getTime();
 				prenotazione.setDataFinePrenotazione(new java.util.Date(secs));
-				prenotazioni.add(prenotazione);
 				
+				prenotazioni.add(prenotazione);
 			}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
-		} finally {
+		}	 finally {
 			try {
 				connection.close();
 			} catch (SQLException e) {
 				throw new PersistenceException(e.getMessage());
 			}
-		}	
+		}
 		return prenotazioni;
 	}
 

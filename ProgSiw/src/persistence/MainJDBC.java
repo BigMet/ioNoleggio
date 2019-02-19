@@ -72,9 +72,9 @@ public class MainJDBC {
 		
 		
 	 	PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();
-	 	List <Prenotazione> prenotazioni = prenotazioneDao.findAll();
+	 	List <Prenotazione> prenotazioni = prenotazioneDao.findByCredential(1);
 		
-	 	System.out.println(prenotazioni+"\r\n");
+	 	System.out.println(prenotazioni);
 		
 //		veicolo2=veicoloDao.findOneByCategory("A", , dataFine)
 
