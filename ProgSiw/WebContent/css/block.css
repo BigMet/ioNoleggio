@@ -1,0 +1,57 @@
+@charset "ISO-8859-1";
+
+
+
+.btn-toolset {
+ display: inline-block;
+ text-align: center;
+ white-space: nowrap;
+ color: #FFFFFF;
+ text-decoration: none;
+ line-height: 1.2;
+ font-weight: normal;
+ font-family: sans-serif;
+ font-size: 18px;
+ background-color: #8080ff;
+ border-radius: 4px;
+ padding: 5px 20px;
+ border: 1px solid #400080;
+ cursor: pointer;
+}
+.btn-toolset:hover {
+ background-color: #8080c0;
+ border-color: #8080c0;
+}
+.btn-toolset > strong {
+ font-size: 24px;
+}
+
+
+
+
+
+
+.shadow1 {
+	margin: 40px;
+	width: 100px;
+    height: 60px;
+	/* background-color: rgb(00,255,00); */ /* Needed for IEs */
+
+	-moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	-webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
+}
+.shadow1 .content {
+	position: relative; /* This protects the inner element from being blurred */
+	padding: 0px;
+	width: 100px;
+    height: 60px;
+
+}
+
+
+
