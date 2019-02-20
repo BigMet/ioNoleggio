@@ -127,15 +127,15 @@
                             <!-- RIMANDO ALLA SERVLET  CHE DOVREBBE RIMANDARMI AL CATALOGO DOVE POI CI SARA' IL NUM DELLE AUTO DISPONIBILI SU OGNI CATEGORIA-->
                             <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
                                 <h6>Aggiungi una prenotazione</h6>
-                                <form action="${pageContext.request.contextPath}/walkIn" method="GET">
+                                <form action="${pageContext.request.contextPath}/catalogo" method="POST">
 
 			             			
-			             			<input type="date" id="start" name="walkin-start"
+			             			<input type="date" id="start" name="trip-start"
 										       value="2019-03-01"
 										       min="2019-03-01" max="2019-12-31">
 										       
 										<!-- DATA FINE -->
-	                                 <input type="date" id="end" name="walkin-end"
+	                                 <input type="date" id="end" name="trip-end"
 										       value="2019-03-02"
 										       min="2019-03-02" max="2019-12-31">
 	                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
@@ -166,15 +166,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+      
         
-           
 
-   
-
-    
-
-   
 
     <!-- ***** Clients Area Start ***** -->
     <div class="dorne-clients-area section-padding-100">

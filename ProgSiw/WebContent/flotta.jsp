@@ -91,7 +91,7 @@
     <!-- ***** Breadcumb Area End ***** -->
 
     
-        
+        <br><br><br>
         <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
                         <img src="img/1e2.png"  alt="immagine 1 e 2">
                        <div class="editors-pick-info">
