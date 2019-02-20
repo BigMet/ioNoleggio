@@ -115,13 +115,13 @@
                                 <form action="${pageContext.request.contextPath}/catalogo" method="GET"> 
                                 
 									<input type="date" id="start" name="trip-start"
-										       value="2019-02-06"
-										       min="2019-02-06" max="2019-12-31">
+										       value="aaaa-mm-dd"
+										       min="aaaa-mm-dd" max="2019-12-31">
 										       
 										<!-- DATA FINE -->
 	                                 <input type="date" id="end" name="trip-end"
-										       value="2019-02-07"
-										       min="2019-02-06" max="2019-12-31">
+										       value="aaaa-mm-dd"
+										       min="aaaa-mm-dd" max="2019-12-31">
 	 
 	 								<!-- <div class="container-login100-form-btn"> -->
 	                                    <button type="submit" class="btn dorne-btn">
