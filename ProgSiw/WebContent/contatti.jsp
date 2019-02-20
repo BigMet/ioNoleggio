@@ -54,6 +54,9 @@
                                 <li class="nav-item active">
                                 	<a class="nav-link" href="contatti.jsp">Contatti <span class="sr-only">(current)</span></a>
                                 </li>
+                                <li class="nav-item dropdown">
+                                	<a class="nav-link" href="flotta.jsp">La nostra flotta </a>
+                                </li>
                            </ul>
                             
                             <c:if test="${not loggato }">                         
@@ -88,8 +91,8 @@
     <!-- ***** Breadcumb Area End ***** -->
 
     <!-- ***** Contact Area Start ***** -->
-    <div class="dorne-contact-area d-md-flex" id="contact">
-        <!-- Contact Form Area -->
+     <div class="dorne-contact-area d-md-flex" id="contact">
+       <!--  Contact Form Area -->
         <div class="contact-form-area equal-height">
             <div class="contact-text">
                 <h4>Riferimenti utili</h4>
@@ -100,13 +103,26 @@
                         <h6><i class="fa fa-map-signs" aria-hidden="true"></i> Cubo 31b</h6>
                     </div>
                     <div class="single-contact-info">
-                        <h6><i class="fa fa-envelope-o" aria-hidden="true"></i> contatti@irent.it</h6>
+                        <h6><i class="fa fa-envelope-o" aria-hidden="true"></i> contatti@ioNoleggio.it</h6>
                         <h6><i class="fa fa-phone" aria-hidden="true"></i> +39 327 63 43 976</h6>
                     </div>
                 </div>
             </div>
             </div>
-        </div>
+        </div> 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
     <!-- ***** Contact Area End ***** -->
 

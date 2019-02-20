@@ -57,6 +57,10 @@
                                 <li class="nav-item dropdown">
                                 	<a class="nav-link" href="contatti.jsp">Contatti </a>
                                 </li>
+                                <li class="nav-item dropdown">
+                                	<a class="nav-link" href="flotta.jsp">La nostra flotta </a>
+                                </li>
+                                
                             </ul>
 
    					<c:if test="${not loggato }">                         
@@ -110,20 +114,20 @@
                                  <!-- DATA INIZIO --> 
                                 <form action="${pageContext.request.contextPath}/catalogo" method="GET"> 
                                 
-								<input type="date" id="start" name="trip-start"
-									       value="2019-02-06"
-									       min="2019-02-06" max="2019-12-31">
-									       
-									<!-- DATA FINE -->
-                                 <input type="date" id="end" name="trip-end"
-									       value="2019-02-07"
-									       min="2019-02-06" max="2019-12-31">
- 
- 								<!-- <div class="container-login100-form-btn"> -->
-                                    <button type="submit" class="btn dorne-btn">
-                                    <i class="fa fa-search pr-2" aria-hidden="true">
-                                    
-                                    </i> 
+									<input type="date" id="start" name="trip-start"
+										       value="2019-02-06"
+										       min="2019-02-06" max="2019-12-31">
+										       
+										<!-- DATA FINE -->
+	                                 <input type="date" id="end" name="trip-end"
+										       value="2019-02-07"
+										       min="2019-02-06" max="2019-12-31">
+	 
+	 								<!-- <div class="container-login100-form-btn"> -->
+	                                    <button type="submit" class="btn dorne-btn">
+	                                    <i class="fa fa-search pr-2" aria-hidden="true">
+	                                    
+	                                    </i> 
                                    	 <h7> Conferma</h7>
                                     </button>
                                 	

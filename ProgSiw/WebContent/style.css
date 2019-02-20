@@ -534,6 +534,11 @@ li {
     font-size: 72px;
 }
 
+.hero-content h3 {
+    color: #fff;
+    font-size: 50px;
+}
+
 .hero-content h4 {
     color: #fff;
     margin-bottom: 0;

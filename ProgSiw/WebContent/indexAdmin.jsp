@@ -100,7 +100,7 @@
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-12 col-md-10">
                     <div class="hero-content">
-                        <h2> Finalizza qui la prenotazione </h2>
+                        <h3> Scegli dal menu' sottostante l'azione di gestione </h3>
                         
                     </div>
                     <!-- Hero Search Form -->
@@ -110,28 +110,58 @@
                         <div class="nav nav-tabs" id="heroTab" role="tablist">
                             <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Prenotati</a>
                             <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false">Walk-in</a>
+                            <a class="nav-item nav-link" id="nav-rientro-tab" data-toggle="tab" href="#nav-rientro" role="tab" aria-controls="nav-events" aria-selected="false">Rientro</a>
                         </div>
                         <!-- Tabs Content -->
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab" >
-                                <h6>Cerca una prenotazione</h6>
+                                <h6>Finalizza una prenotazione</h6>
 		                        <div style="display: flex">
-		                        <input type="text" name="idP" id="idPrenotazione" placeholder="Id della prenotazione" >
-		             			<input type="text" name="nP" id="numPatente" placeholder="Numero Patente" >
-		             			<input type="text" name="nC" id="numCarta" placeholder="Numero carta">
-                                    <button onclick="creaNoleggio()" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Cerca</button>
+		                        <input type="text" name="idP" id="idPrenotazione" placeholder="Id prenotazione" >
+		             			<input type="text" name="nP" id="numPatente" placeholder="N Patente" >
+		             			<input type="text" name="nC" id="numCarta" placeholder="N carta">
+                                    <button onclick="creaNoleggio()" class="btn dorne-btn"> Conferma</button>
                             	</div>
                             </div>
+                            
+                            <!-- RIMANDO ALLA SERVLET  CHE DOVREBBE RIMANDARMI AL CATALOGO DOVE POI CI SARA' IL NUM DELLE AUTO DISPONIBILI SU OGNI CATEGORIA-->
                             <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
                                 <h6>Aggiungi una prenotazione</h6>
-                                <form action="scemo" method="get">
-		                        <input type="text" name="caviarSearch" id="idPrenotazione" placeholder="Id della prenotazione">
-		             			<input type="text" name="caviarSearch" id="numPatente" placeholder="Numero Patente">
-		             			<input type="text" name="caviarSearch" id="numCarta" placeholder="Numero carta">
-                                    <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Cerca</button>
+                                <form action="${pageContext.request.contextPath}/walkIn" method="GET">
+
+			             			
+			             			<input type="date" id="start" name="walkin-start"
+										       value="2019-03-01"
+										       min="2019-03-01" max="2019-12-31">
+										       
+										<!-- DATA FINE -->
+	                                 <input type="date" id="end" name="walkin-end"
+										       value="2019-03-02"
+										       min="2019-03-02" max="2019-12-31">
+	                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
                                 </form>
                             </div>
+                            
+                            <!-- RIMANDO ALLA PAGINA IN CUI SELEZIONI TUTTI I DANNI CHE L'AUTO HA AVUTO O NO -->
+                           <div class="tab-pane fade" id="nav-rientro" role="tabpanel" aria-labelledby="nav-events-tab">
+                                <h6>Termina un noleggio</h6>
+                               <form action="${pageContext.request.contextPath}/terminaNoleggio" method="GET">
+                             <!--    <input type="text" name="nomeUtente" id="idPrenotazione" placeholder="Nome">
+		                        <input type="text" name="cognomeUtente" id="idPrenotazione" placeholder="Cognome"> -->
+		                        <input type="date" id="endRent" name="rent-end"
+										       value="2019-03-01"
+										       min="2019-03-01" max="2019-12-31">
+		                        
+		             			<input type="text" name="nP" id="numPatente" placeholder="N Patente">
+		             			<input type="text" name="nC" id="numCarta" placeholder="N noleggio">
+                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
+                                </form>
+                            </div> 
+                            
+                            
                           </div>
+                          
+                          
                         </div>
                     </div>
                 </div>

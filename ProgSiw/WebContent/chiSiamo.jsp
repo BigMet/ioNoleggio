@@ -50,6 +50,9 @@
                                 <li class="nav-item dropdown">
                                 	<a class="nav-link" href="contatti.jsp">Contatti </a>
                                 </li>
+                                <li class="nav-item dropdown">
+                                	<a class="nav-link" href="flotta.jsp">La nostra flotta </a>
+                                </li>
 							</ul>
                             
                             <c:if test="${not loggato }">                         
@@ -87,14 +90,16 @@
     <div class="dorne-contact-area d-md-flex" id="contact">
         <!-- Contact Form Area -->
         <div class="contact-form-area equal-height">
-            <div class="contact-text">
+            <div class="contact-text"> 
                 <h4>Brevi cenni storici</h4>
-                <p> ioNoleggio ha sempre nutrito una profonda passione per i motori. Gia' negli anni Venti, il fondatore si distingue partecipando con successo alle piu' prestigiose competizioni su strada e nel 1924, a cavallo della fedelissima Harley Davidson, si aggiudica l'ambito primo posto sul podio. 
+            
+                <div style=’text-align:justify’>
+                ioNoleggio ha sempre nutrito una profonda passione per i motori. Gia' negli anni Venti, il fondatore si distingue partecipando con successo alle piu' prestigiose competizioni su strada e nel 1924, a cavallo della fedelissima Harley Davidson, si aggiudica l'ambito primo posto sul podio. 
         L'azienda ha rappresentato fino al 2014 la piu' grande realta' a capitale interamente italiano operante nel settore del noleggio a breve e medio termine di auto e veicoli commerciali, basando la sua forza nella imprenditorialita' familiare che ne ha caratterizzato lo sviluppo nel corso dei vari decenni e che ha continuato anche nella terza generazione della famiglia: un primato che possono vantare solo pochissime aziende italiane. 
         Nei suoi 67 anni di attivita', ioNoleggio ha sviluppato una rete sempre piu' capillare sul territorio nazionale, anche per noleggio furgoni, con una flotta veicoli davvero degna di nota.
-         </p>
-                
-            </div>
+         
+              </div>  
+            </div> 
             </div>
         </div>
 

@@ -109,14 +109,18 @@
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
                             <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="index.jsp">Home </a>
                                 </li>
                                 <li class="nav-item dropdown">
                                 	 <a class="nav-link" href="chiSiamo.jsp">Chi siamo </a>
                                 </li>
                                 <li class="nav-item dropdown">
                                 	<a class="nav-link" href="contatti.jsp">Contatti </a>
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                	<a class="nav-link" href="flotta.jsp">La nostra flotta </a>
                                 </li>
                             </ul>
 
@@ -133,8 +137,8 @@
                                 <a href="disconnectServlet">Disconnetti</a>
                             </div>
                             
-                            <div class="dorne-signin-btn">
-                                <a href="profilo.jsp">${nome}</a>
+                            <div class="nav-item active">
+                                <a href="profilo.jsp">${nome} <span class="sr-only">(current)</span></a>
                             </div>
                             
                             </c:if>
