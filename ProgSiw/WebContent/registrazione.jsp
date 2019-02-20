@@ -62,14 +62,7 @@
 						<input class="input100" type="text" name="codicefiscale" placeholder="codice fiscale">
 						<span class="focus-input100"></span>
 					</div>
-<!-- 		<div class="wrap-input100 validate-input m-b-20" data-validate="Inserisci la carta di credito">
-						<input class="input100" type="text" name="numcartadicredito" placeholder="carta di credito">
-						<span class="focus-input100"></span>
-					</div>
-		<div class="wrap-input100 validate-input m-b-20" data-validate="Inserisci la patente">
-						<input class="input100" type="text" name="numpatente" placeholder="patente">
-						<span class="focus-input100"></span>
-					</div> -->
+
 		<div class="wrap-input100 validate-input m-b-20">
 						<input class="input100" type="date" name="datanascita">
 						<span class="focus-input100"></span>

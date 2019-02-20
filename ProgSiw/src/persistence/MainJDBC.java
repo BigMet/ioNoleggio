@@ -32,9 +32,9 @@ public class MainJDBC {
 		UtenteDao utenteDao = factory.getUtenteDAO();
 		
 //		Utente utente1 = new Utente("utente", "Davide", "Perri", "pass", "n", "n", "n", "n", date1, "222",false);
-//		Utente utenteAdmin = new Utente("admin", "Matteo", "Grande", "admin", "n", "n", "n", "n", date2, "333", true);
+		Utente utenteAdmin = new Utente("admin", "Matteo", "Grande", "admin", "n", "n", "n", "n", date2, "333", true);
 //		utenteDao.save(utente1);
-//		utenteDao.save(utenteAdmin);
+		utenteDao.save(utenteAdmin);
 		
 
 
@@ -71,10 +71,10 @@ public class MainJDBC {
 		
 		
 		
-	 	PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();
-	 	List <Prenotazione> prenotazioni = prenotazioneDao.findByCredential(1);
-		
-	 	System.out.println(prenotazioni);
+//	 	PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();
+//	 	List <Prenotazione> prenotazioni = prenotazioneDao.findByCredential(1);
+//		
+//	 	System.out.println(prenotazioni);
 		
 //		veicolo2=veicoloDao.findOneByCategory("A", , dataFine)
 

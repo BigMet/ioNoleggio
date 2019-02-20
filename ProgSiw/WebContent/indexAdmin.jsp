@@ -108,7 +108,7 @@
                     
                         <!-- Tabs -->
                         <div class="nav nav-tabs" id="heroTab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Prenotati</a>
+                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Conferma</a>
                             <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false">Walk-in</a>
                             <a class="nav-item nav-link" id="nav-rientro-tab" data-toggle="tab" href="#nav-rientro" role="tab" aria-controls="nav-events" aria-selected="false">Rientro</a>
                         </div>
