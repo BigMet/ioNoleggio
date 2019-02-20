@@ -30,10 +30,15 @@ public class prenotazioneServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //		System.out.println("SERVLETPRENOTAZIONE");
-		
-		Calendar cal = Calendar.getInstance();
-		cal.set(2019, Calendar.FEBRUARY, 06);  // 21 marzo 1995
-		Date date1 = cal.getTime();
+
+		Date date1 = new Date();
+		int dd, mm, aaaa;
+		dd = date1.getDate();
+		mm = date1.getMonth()+1;
+		aaaa = date1.getYear();
+		System.out.println("Giorno: "+dd+" Mese: "+mm+" Anno: "+aaaa);
+
+
 		HttpSession session=req.getSession();
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();

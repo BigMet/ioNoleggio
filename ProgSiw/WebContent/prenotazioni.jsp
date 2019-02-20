@@ -17,8 +17,8 @@
 		</a>
 		<br>
 		</c:forEach>
-		<script type="text/javascript">
-
+		
+<script type="text/javascript">
 var data = new Date();
 var dd, mm, aaaa;
 dd = data.getDate() + ":";
