@@ -29,7 +29,7 @@
                 </div>
                 
                 <div class="signup-form">
-                    <form method="POST" class="register-form" id="register-form">
+                    <form action="${pageContext.request.contextPath}/walkIn" method="POST" class="register-form" id="register-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <div class="form-input">
@@ -47,8 +47,8 @@
 								</div>
 								<br>
 								<div class="form-input">
-                                    <label for="CodiceFiscale" class="required">Indirizzo</label>
-                                    <input type="text" name="company" id="company" />
+                                    <label for="CodiceFiscale" class="required">Codice Fiscale</label>
+                                    <input type="text" name="codicefiscale" id="codicefiscale" />
                                 </div>
                                 
                                 
@@ -82,7 +82,7 @@
                         <br><br>
                         <div class="form-submit">
                             <input type="submit" value="Conferma" class="submit" id="submit" name="submit" />
-                            <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                            <input type="submit" value="Reset" class="submit" id="reset"  name="reset" />
                         </div>
                     </form>
                 </div>

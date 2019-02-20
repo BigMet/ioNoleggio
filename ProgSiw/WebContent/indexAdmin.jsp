@@ -131,13 +131,13 @@
 
 			             			
 			             			<input type="date" id="start" name="trip-start"
-										       value="2019-03-01"
-										       min="2019-03-01" max="2019-12-31">
+										       value="aaaa-mm-dd"
+										       min="aaaa-mm-dd" max="aaaa-mm-dd">
 										       
 										<!-- DATA FINE -->
 	                                 <input type="date" id="end" name="trip-end"
-										       value="2019-03-02"
-										       min="2019-03-02" max="2019-12-31">
+										       value="aaaa-mm-dd"
+										       min="aaaa-mm-dd" max="aaaa-mm-dd">
 	                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
                                 </form>
                             </div>

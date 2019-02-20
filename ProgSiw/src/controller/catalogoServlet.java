@@ -47,16 +47,17 @@ public class catalogoServlet extends HttpServlet {
 		int giorni=(int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 		session.setAttribute("giorni", giorni);
 		
-//		System.out.println("il numero dei giorni è "+ giorni);
 		
 		RequestDispatcher disp;
 		if(giorni<=0) {
 			disp = req.getRequestDispatcher("index.jsp");
 			disp.forward(req, resp);
 		}else {
-//			HashMap<char, int>
-			
+			if((Boolean)session.getAttribute("admin")==false) {
 			disp = req.getRequestDispatcher("catalogo.jsp");
+			}
+			else
+			disp = req.getRequestDispatcher("registrazioneWalkin.jsp");
 			disp.forward(req, resp);
 			
 		}
