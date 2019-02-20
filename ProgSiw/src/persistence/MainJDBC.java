@@ -17,10 +17,10 @@ public class MainJDBC {
 		Calendar cal = Calendar.getInstance();
 		cal.set(1996, Calendar.JANUARY, 1);  // 21 marzo 1995
 		Date date1 = cal.getTime();
-		
-		cal.set(1997, Calendar.FEBRUARY, 3);  // 21 marzo 1995
-		Date date2 = cal.getTime();
-		
+//		
+//		cal.set(1997, Calendar.FEBRUARY, 3);  // 21 marzo 1995
+//		Date date2 = cal.getTime();
+//		
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 		
@@ -31,29 +31,29 @@ public class MainJDBC {
 		
 		UtenteDao utenteDao = factory.getUtenteDAO();
 		
-//		Utente utente1 = new Utente("utente", "Davide", "Perri", "pass", "n", "n", "n", "n", date1, "222",false);
+		Utente utente1 = new Utente("utente", "Davide", "Perri", "pass", "n", "n", "n", "n", date1, "222",false);
 //		Utente utenteAdmin = new Utente("admin", "Matteo", "Grande", "admin", "n", "n", "n", "n", date2, "333", true);
-//		utenteDao.save(utente1);
+		utenteDao.save(utente1);
 //		utenteDao.save(utenteAdmin);
 		
 
 
 		// creo i veicoli
 		
-		VeicoloDao veicoloDao = factory.getVeicoloDAO();
-		
-		Veicolo veicolo1 = new Veicolo("aaaaaa", "A", "FIAT", "500", date1);
-		Veicolo veicolo2 = new Veicolo("bbbbbb", "A", "PEUGEOT", "107", date1);
-		Veicolo veicolo3 = new Veicolo("cccccc", "A", "OPEL", "adam", date1);
-		Veicolo veicolo4 = new Veicolo("dddddd", "B", "FIAT", "panda", date1);
-		Veicolo veicolo5 = new Veicolo("eeeeee", "B", "RENAULT", "clio", date1);
-		Veicolo veicolo6 = new Veicolo("ffffff", "B", "TOYOTA", "yaris", date1);
-		Veicolo veicolo7 = new Veicolo("gggggg", "C", "FORD", "fiesta", date1);
-		Veicolo veicolo8 = new Veicolo("hhhhhh", "C", "CITROEN", "c3", date1);
-		Veicolo veicolo9 = new Veicolo("iiiiii", "D", "AUDI", "A3", date1);
-		Veicolo veicolo10 = new Veicolo("llllll","D", "VOLKSWAGEN", "golf",date1);
-		
-		
+//		VeicoloDao veicoloDao = factory.getVeicoloDAO();
+//		
+//		Veicolo veicolo1 = new Veicolo("aaaaaa", "A", "FIAT", "500", date1);
+//		Veicolo veicolo2 = new Veicolo("bbbbbb", "A", "PEUGEOT", "107", date1);
+//		Veicolo veicolo3 = new Veicolo("cccccc", "A", "OPEL", "adam", date1);
+//		Veicolo veicolo4 = new Veicolo("dddddd", "B", "FIAT", "panda", date1);
+//		Veicolo veicolo5 = new Veicolo("eeeeee", "B", "RENAULT", "clio", date1);
+//		Veicolo veicolo6 = new Veicolo("ffffff", "B", "TOYOTA", "yaris", date1);
+//		Veicolo veicolo7 = new Veicolo("gggggg", "C", "FORD", "fiesta", date1);
+//		Veicolo veicolo8 = new Veicolo("hhhhhh", "C", "CITROEN", "c3", date1);
+//		Veicolo veicolo9 = new Veicolo("iiiiii", "D", "AUDI", "A3", date1);
+//		Veicolo veicolo10 = new Veicolo("llllll","D", "VOLKSWAGEN", "golf",date1);
+//		
+//		
 //		veicoloDao.save(veicolo1);		
 //		veicoloDao.save(veicolo2);	
 //		veicoloDao.save(veicolo3);		
@@ -70,11 +70,11 @@ public class MainJDBC {
 		
 		
 		
-		
-	 	PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();
-	 	List <Prenotazione> prenotazioni = prenotazioneDao.findByCredential(1);
-		
-	 	System.out.println(prenotazioni);
+//		
+//	 	PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();
+//	 	List <Prenotazione> prenotazioni = prenotazioneDao.findByCredential(1);
+//		
+//	 	System.out.println(prenotazioni);
 		
 //		veicolo2=veicoloDao.findOneByCategory("A", , dataFine)
 

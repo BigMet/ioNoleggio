@@ -8,8 +8,24 @@
 <title>Prenotazioni</title>
 </head>
 <body>
+ <link href="css/block.css" rel="stylesheet" >
 		<c:forEach items="${prenotazioni}" var="p">
-						${p.idPrenotazione} IdUtente: ${p.idCliente}<br>
-					</c:forEach>
+		<a  class="btn-toolset">
+  			<strong>
+						Numero prenotazione: ${p.idPrenotazione} Prezzo: ${p.prezzo}
+			</strong>
+		</a>
+		<br>
+		</c:forEach>
+		<script type="text/javascript">
+
+var data = new Date();
+var dd, mm, aaaa;
+dd = data.getDate() + ":";
+mm = data.getMonth()+1 + ":";
+aaaa = data.getFullYear() + ":";
+document.write("Sono le ore " + dd + mm + aaaa);
+
+</script>
 </body>
 </html>
