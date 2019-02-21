@@ -79,13 +79,20 @@
 						</button>
 					</div>
 					
-		<div class="text-center">
+			<div class="text-center">
 						<a href="index.jsp" class="txt2 hov1">
 							Torna alla home
+						</a>
+					</div>
+					
+					<div class="text-center">
+						<a href="provaLogin.jsp" class="txt2 hov1">
+							Accedi
 						</a>
 					</div>
 				
 			
 		</form>
+
 </body>
 </html>

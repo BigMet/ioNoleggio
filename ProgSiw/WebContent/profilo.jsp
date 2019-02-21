@@ -52,7 +52,7 @@
     
     <!-- ***** Header Area Start ***** -->
     <header class="header_area" id="header">
-        <div class="container-fluid h-100">
+        <div class="container-fluid h-100" >
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg">
@@ -93,8 +93,8 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Il mio profilo <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     	<a class="dropdown-item" href="profilo.jsp">${nome}</a>
-                                        <a class="dropdown-item" href="prenotazioniServlet">Le tue prenotazioni</a>
-                                        <a class="dropdown-item" href="noleggioServlet">I tuoi noleggi</a>
+                                        <a class="dropdown-item" href="prenotazioniCliente">Le tue prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggioCliente">I tuoi noleggi</a>
                                     </div>
                                 </li>
                             
@@ -111,16 +111,10 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
+ <div class="container-login100" style="background-image: url('images/sfondo-sfumato-4.jpg');" >
     
     <br><br><br>
-    <div class="container">
+    <div class="container" >
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -228,6 +222,7 @@
             </div>
         </div>
     </div>
+    
     
     
     
