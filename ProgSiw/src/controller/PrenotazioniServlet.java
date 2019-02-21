@@ -30,6 +30,7 @@ public class PrenotazioniServlet extends HttpServlet {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 	 	PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();
 	 	List <Prenotazione> prenotazioni = prenotazioneDao.findAll();
+	 	
 	 	session.setAttribute("prenotazioni", prenotazioni);
 	 	RequestDispatcher disp;
 	 	disp = req.getRequestDispatcher("prenotazioni.jsp");

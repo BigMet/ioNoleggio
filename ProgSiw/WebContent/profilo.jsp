@@ -31,7 +31,6 @@
 
 
     
-    <!-- <script src="js/custom.js"></script> -->
 </head>
 
 <body>
@@ -40,71 +39,13 @@
         <div class="dorne-load"></div>
     </div> 
     
-    
-<aside class="profile-card" >
-	<header>
-  
- <link href="css/profilo.css" rel="stylesheet" >
- <link href="css/block.css" rel="stylesheet" >
- 
-    <!-- here’s the avatar -->
-    <a target="_blank" >
-      <img src="img/Davide.jpg" class="hoverZoomLink">
-    </a>
-
-    <!-- the username -->
-    <h1>
-            ${nome}
-           	
-          </h1>
-
-    <!-- and role or location -->
-    <h2>
-             ${email}
-          </h2>
-
-  </header>
-  
-  
-  	 <div class="profile-bio" >
-
-    <p>
-      Un semplice ragazzo con evidenti problemi
-    </p>
-
-  </div>
-  
-  <!-- DA QUI FACCIO PROVE -->
-  
- 
-<!-- <!--  <div style="float:left; display:block; width:150px; height:150px;">
-  --> 
-  
-  <a href="prenotazioniCliente" class="btn-toolset">
-  <strong>Le mie prenotazioni</strong>
-   </a> 
-  <!-- </div> -->
-  
-   <a href="#" class="btn-toolset">
-  <strong>I miei noleggi</strong>
-  </a>
-  
-  <a href="#" class="btn-toolset">
-  <strong></strong>
-  </a>
-  
-  
-  
-  </aside>
-    
-
     <!-- ***** Header Area Start ***** -->
     <header class="header_area" id="header">
         <div class="container-fluid h-100">
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.jsp"><img src="img/core-img/logo.png" alt="ciao"></a>
+                        <a class="navbar-brand" href="index.jsp"><img src="img/core-img/logo.png" alt="img non caricata correttamente"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
@@ -142,7 +83,7 @@
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     	<a class="dropdown-item" href="profilo.jsp">${nome}</a>
                                         <a class="dropdown-item" href="prenotazioniServlet">Le tue prenotazioni</a>
-                                        <a class="dropdown-item" href="noleggi.jsp">I tuoi noleggi</a>
+                                        <a class="dropdown-item" href="noleggioServlet">I tuoi noleggi</a>
                                     </div>
                                 </li>
                             
@@ -156,6 +97,94 @@
     
     <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg)">
     </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<aside class="profile-card" >
+	<header>
+  
+  
+ <link href="css/profilo.css" rel="stylesheet" >
+ <link href="css/block.css" rel="stylesheet" >
+ 
+    <!-- here’s the avatar -->
+    
+
+    <!-- the username -->
+   <h1>${nome} ${cognome}</h1>
+            
+    <br>
+      <h2>E-mail : ${email}</h2>
+      <h2>Indirizzo : ${indirizzo}</h2>
+      <h2>Telefono : ${telefono}</h2>
+      <h2>Numero Patente : ${numpatente}</h2>
+      <h2>Data di nascita : ${datadinascita.getDate()}-${datadinascita.getMonth()+1}-${datadinascita.getYear()+1900}               </h2>
+	  
+	  
+  </header>
+  
+  
+  	 <!-- <div class="profile-bio" >
+
+    <p>
+      Un semplice ragazzo con evidenti problemi
+    </p>
+
+  </div> -->
+  
+
+  
+  <a href="prenotazioniCliente" class="btn-toolset">
+  <strong>Le mie prenotazioni</strong>
+   </a> 
+  <!-- </div> -->
+  
+   <a href="#" class="btn-toolset">
+  <strong>I miei noleggi</strong>
+  </a>
+  
+  <a href="#" class="btn-toolset">
+  <strong></strong>
+  </a>
+  
+  
+  </aside>
+    
+
+    
     
     
     

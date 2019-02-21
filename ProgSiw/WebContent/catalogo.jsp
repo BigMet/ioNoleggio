@@ -2,7 +2,9 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 
-	
+	 <c:if test="${not loggato}">
+    	<script>window.location = "index.jsp" </script> 
+    </c:if>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -70,6 +72,7 @@
                                     <a class="nav-link" href="index.jsp">Home </a>
                                 </li>
                                 
+                              <c:if test="${not admin}">
                                 <li class="nav-item dropdown">
                                 	 <a class="nav-link" href="chiSiamo.jsp">Chi siamo </a>
                                 </li>
@@ -79,6 +82,7 @@
                                 <li class="nav-item dropdown">
                                 	<a class="nav-link" href="flotta.jsp">La nostra flotta </a>
                                 </li>
+                               </c:if>
                                 
                             </ul>
 
@@ -101,12 +105,23 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Il mio profilo <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     	<a class="dropdown-item" href="profilo.jsp">${nome}</a>
-                                        <a class="dropdown-item" href="prenotazioni.jsp">Le tue prenotazioni</a>
-                                        <a class="dropdown-item" href="noleggi.jsp">I tuoi noleggi</a>
+                                        <a class="dropdown-item" href="prenotazioniCliente">Le tue prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggioCliente">I tuoi noleggi</a>
                                     </div>
                                 </li>
-                            
 						    </c:if>
+						    
+						    <c:if test="${admin}">
+						    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestione <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="prenotazioniServlet">Tutte le prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggioServlet">Tutti i noleggi</a>
+                                    </div>
+                                </li>
+						    
+						    </c:if>
+                            
                             </c:if>
                         </div>
                     </nav>

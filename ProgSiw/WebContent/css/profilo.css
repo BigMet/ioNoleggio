@@ -4,7 +4,7 @@ html {
 
 body {
   overflow: hidden;
-  background: #7689ea  no-repeat center center fixed;
+  background: #ffffff  no-repeat center center fixed;
   background-size: cover;
   position: fixed;
   padding: 0px;
@@ -19,7 +19,7 @@ body:before {
   content: "";
   height: 0px;
   padding: 0px;
-  border: 130em solid #400080;
+  
   position: absolute;
   left: 50%;
   top: 100%;
@@ -52,7 +52,7 @@ p {
 }
 
 .profile-card {
-  background: #FFB300;
+  background: #36394c;
   width: 56px;
   height: 56px;
   position: absolute;
@@ -79,7 +79,7 @@ p {
   display: inline-block;
   float: left;
   border-right: 2px dashed #EEEEEE;
-  background: #808080;
+  background: #E6E6FA;
   color: #000000;
   margin-top: 50px;
   opacity: 0;
@@ -89,7 +89,7 @@ p {
 }
 
 .profile-card header h1 {
-  color: #FF5722;
+  color: #000000;
 }
 
 .profile-card header a {
@@ -106,7 +106,7 @@ p {
   right: 3px;
   width: 20px;
   height: 20px;
-  border: 4px solid #808080;
+  border: 4px solid #E6E6FA;
   -webkit-transform: scale(0);
   transform: scale(0);
   background: -webkit-linear-gradient(top, #2196F3 0%, #2196F3 50%, #FFC107 50%, #FFC107 100%);
@@ -141,7 +141,7 @@ p {
   display: inline-block;
   float: right;
   padding: 50px 20px 30px 20px;
-  background: #808081;
+  background: #E6E6FA;
   color: #333333;
   margin-top: 50px;
   text-align: center;
@@ -160,7 +160,7 @@ p {
   float: right;
   margin: 0px;
   padding: 15px 20px;
-  background: #808080;
+  background: #E6E6FA;
   margin-top: 50px;
   text-align: center;
   opacity: 0;
@@ -297,7 +297,7 @@ p {
 
 @-webkit-keyframes moveUp {
   0% {
-    background: #FFB300;
+    background: #36394c;
     top: 100%;
   }
   50% {
@@ -311,7 +311,7 @@ p {
 
 @keyframes moveUp {
   0% {
-    background: #FFB300;
+    background: #36394c;
     top: 100%;
   }
   50% {
@@ -319,7 +319,7 @@ p {
   }
   100% {
     top: 60%;
-    background: #808082;
+    background: #E6E6FA;
   }
 }
 
@@ -333,7 +333,7 @@ p {
   100% {
     width: 440px;
     height: 280px;
-    background: #808080;
+    background: #E6E6FA;
     -webkit-border-radius: 4px;
   }
 }
@@ -348,7 +348,7 @@ p {
   100% {
     width: 440px;
     height: 280px;
-    background: #808080;
+    background: #E6E6FA;
     border-radius: 4px;
   }
 }
@@ -483,7 +483,7 @@ p {
     100% {
       width: 280px;
       height: 440px;
-      background: #808080;
+      background: #E6E6FA;
       -webkit-border-radius: 4px;
     }
   }
@@ -497,7 +497,7 @@ p {
     100% {
       width: 700px;
       height: 450px;
-      background: #808080;
+      background: #E6E6FA;
       border-radius: 4px;
     }
   }

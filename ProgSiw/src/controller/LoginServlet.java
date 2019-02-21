@@ -46,6 +46,16 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 		session.setAttribute("loggato", true);
 		session.setAttribute("nome", utente.getNome());
 		session.setAttribute("idutente", utente.getIdUtente());
+		session.setAttribute("cognome", utente.getCognome());
+		session.setAttribute("indirizzo", utente.getIndirizzo());
+		session.setAttribute("telefono", utente.getNumCellulare());
+//		if(utente.getNumPatente()=="")
+//			session.setAttribute("numpatente", "/-----------/");
+//		else
+			session.setAttribute("numpatente", utente.getNumPatente());
+		
+		
+		session.setAttribute("datadinascita", utente.getDataNascita());
 		RequestDispatcher disp;
 		
 		if(!utente.getAdmin()) {

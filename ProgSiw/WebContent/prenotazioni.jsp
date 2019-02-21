@@ -3,6 +3,10 @@
     
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 
+ <c:if test="${not loggato}">
+    	<script>window.location = "index.jsp" </script> 
+    </c:if>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -97,8 +101,8 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Il mio profilo <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     	<a class="dropdown-item" href="profilo.jsp">${nome}</a>
-                                        <a class="dropdown-item" href="prenotazioni.jsp">Le tue prenotazioni</a>
-                                        <a class="dropdown-item" href="noleggi.jsp">I tuoi noleggi</a>
+                                        <a class="dropdown-item" href="prenotazioniCliente">Le tue prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggioCliente">I tuoi noleggi</a>
                                     </div>
                                 </li>
                              </c:if>
@@ -107,8 +111,8 @@
                              <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestione <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="prenotazioni.jsp">Tutte le prenotazioni</a>
-                                        <a class="dropdown-item" href="noleggi.jsp">Tutti i noleggi</a>
+                                        <a class="dropdown-item" href="prenotazioniServlet">Tutte le prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggioServlet">Tutti i noleggi</a>
                                     </div>
                                 </li>   
                             </c:if>
@@ -129,15 +133,7 @@
     </div>
     <!-- ***** Breadcumb Area End ***** -->
     
-    
-   <%--  <c:forEach items="${prenotazioni}" var="p">
-		  <a class="btn-toolset">
-  					<strong> 
-						ID prenotazione: ${p.idPrenotazione} Prezzo: ${p.prezzo}Euro Effettuata in data: ${p.dataPrenotazione.getDate()}/${p.dataPrenotazione.getMonth()+1}/${p.dataPrenotazione.getYear()+1900}
-					</strong>
-   			</a>
-   				<br>
-					</c:forEach> --%>
+
 
         
         
@@ -151,6 +147,8 @@
 								<th class="column1">IdPrenotazione</th>
 								<th class="column2">Prezzo</th>
 								<th class="column3">Data Prenotazione</th>
+								<th class="column4">Categoria</th>
+								<th class="column5"></th>
 								
 							</tr>
 						</thead>
@@ -159,8 +157,10 @@
 
 									<tr>
 										<td class="column1">${p.idPrenotazione}</td>
-										<td class="column2">${p.prezzo}Euro</td>
+										<td class="column2">${p.prezzo} Euro</td>
 										<td class="column3">${p.dataPrenotazione.getDate()}/${p.dataPrenotazione.getMonth()+1}/${p.dataPrenotazione.getYear()+1900}</td>
+										<td class="column4">${categoria}</td>
+										<td class="column5"></td>
 										<!-- <td class="column4">$999.00</td>
 										<td class="column5">1</td>
 										<td class="column6">$999.00</td> -->

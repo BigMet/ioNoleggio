@@ -44,6 +44,7 @@ public class CategoriaAServlet extends HttpServlet {
 		}
 		
 		Veicolo veicolo = veicoloDao.findOneByCategory(req.getParameter("categ"),dataInizioTmp,dataFineTmp);
+		session.setAttribute("categoria",req.getParameter("categ") );
 		RequestDispatcher disp;
 		PrintWriter out=resp.getWriter();
 		

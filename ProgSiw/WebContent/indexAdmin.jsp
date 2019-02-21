@@ -72,9 +72,7 @@
                                     <a class="nav-link" href="indexAdmin.jsp">Home <span class="sr-only">(current)</span></a>
                                 </li>
                             </ul>
-                           
- 					
-                            
+
                       	<c:if test="${loggato }">    
                             <div class="dorne-signin-btn">
                                 <a href="disconnectServlet">Disconnetti</a>
@@ -83,8 +81,8 @@
                             <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestione <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="prenotazioni.jsp">Tutte le prenotazioni</a>
-                                        <a class="dropdown-item" href="noleggi.jsp">Tutti i noleggi</a>
+                                        <a class="dropdown-item" href="prenotazioniServlet">Tutte le prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggioServlet">Tutti i noleggi</a>
                                     </div>
                                 </li>
                             
