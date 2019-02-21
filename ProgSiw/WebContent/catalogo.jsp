@@ -70,6 +70,16 @@
                                     <a class="nav-link" href="index.jsp">Home </a>
                                 </li>
                                 
+                                <li class="nav-item dropdown">
+                                	 <a class="nav-link" href="chiSiamo.jsp">Chi siamo </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                	<a class="nav-link" href="contatti.jsp">Contatti </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                	<a class="nav-link" href="flotta.jsp">La nostra flotta </a>
+                                </li>
+                                
                             </ul>
 
    					<c:if test="${not loggato }">                         
@@ -87,9 +97,14 @@
                             
                             <c:if test="${not admin}">
 						    	
-                            <div class="dorne-signin-btn">
-                                <a href="profilo.jsp">${nome}</a>
-                            </div>
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Il mio profilo <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    	<a class="dropdown-item" href="profilo.jsp">${nome}</a>
+                                        <a class="dropdown-item" href="prenotazioni.jsp">Le tue prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggi.jsp">I tuoi noleggi</a>
+                                    </div>
+                                </li>
                             
 						    </c:if>
                             </c:if>

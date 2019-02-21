@@ -41,7 +41,7 @@
     </div> 
     
     
-<aside class="profile-card">
+<aside class="profile-card" >
 	<header>
   
  <link href="css/profilo.css" rel="stylesheet" >
@@ -66,7 +66,7 @@
   </header>
   
   
-  	 <div class="profile-bio">
+  	 <div class="profile-bio" >
 
     <p>
       Un semplice ragazzo con evidenti problemi
@@ -104,7 +104,7 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.jsp"><img src="img/core-img/logo.png" alt=""></a>
+                        <a class="navbar-brand" href="index.jsp"><img src="img/core-img/logo.png" alt="ciao"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
@@ -137,9 +137,14 @@
                                 <a href="disconnectServlet">Disconnetti</a>
                             </div>
                             
-                            <div class="nav-item active">
-                                <a href="profilo.jsp">${nome} <span class="sr-only">(current)</span></a>
-                            </div>
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Il mio profilo <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    	<a class="dropdown-item" href="profilo.jsp">${nome}</a>
+                                        <a class="dropdown-item" href="prenotazioni.jsp">Le tue prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggi.jsp">I tuoi noleggi</a>
+                                    </div>
+                                </li>
                             
                             </c:if>
                         </div>

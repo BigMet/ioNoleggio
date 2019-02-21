@@ -64,7 +64,6 @@
                                 <li class="nav-item dropdown">
                                 	<a class="nav-link" href="flotta.jsp">La nostra flotta </a>
                                 </li>
-                                
                             </ul>
 
    					<c:if test="${not loggato }">                         
@@ -79,12 +78,18 @@
                             <div class="dorne-signin-btn">
                                 <a href="disconnectServlet">Disconnetti</a>
                             </div>
-                            
-                            <div class="dorne-signin-btn">
-                                <a href="profilo.jsp">${nome}</a>
-                            </div>
-                            
+       
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Il mio profilo <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    	<a class="dropdown-item" href="profilo.jsp">${nome}</a>
+                                        <a class="dropdown-item" href="prenotazioni.jsp">Le tue prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggi.jsp">I tuoi noleggi</a>
+                                    </div>
+                                </li>
                             </c:if>
+                            
+                            
                         </div>
                     </nav>
                 </div>
@@ -92,6 +97,11 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
+    
+    
+	
+    
+    
 
     <!-- ***** Welcome Area Start ***** -->
     <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(img/bg-img/home-bg.jpg);">
@@ -100,7 +110,7 @@
                 <div class="col-12 col-md-10">
                     <div class="hero-content">
                         <h2>Vai ovunque tu voglia </h2>
-                        <h4>Il meglio solo per te</h4>
+                        <h4>Prenota qui la tua auto</h4>
                     </div>
                     <!-- Hero Search Form -->
                     <div class="hero-search-form">

@@ -18,7 +18,7 @@
 
     <div class="main">
 
-        <div class="container">
+        <div class="container" >
             <div class="signup-content">
                 <div class="signup-img">
                     <img src="images/form-img.jpg" alt="">
