@@ -51,6 +51,11 @@
                                     <input type="text" name="codicefiscale" id="codicefiscale" />
                                 </div>
                                 
+                                <div class="form-input">
+                                    <label for="Indirizzo" class="required">Indirizzo</label>
+                                    <input type="text" name="indirizzo" id="indirizzo" />
+                                </div>
+                                
                                 
                                 
                             </div>
