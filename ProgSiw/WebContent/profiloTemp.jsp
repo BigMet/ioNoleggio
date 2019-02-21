@@ -6,24 +6,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/utilT.css">
-	<link rel="stylesheet" type="text/css" href="css/mainT.css">
-<!--===============================================================================================-->
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Prenotazioni</title>
+<title>Profilo temp</title>
 	<meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,8 +48,6 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link" href="index.jsp">Home </a>
                                 </li>
-                                
-                              <c:if test="${not admin}">
                                 <li class="nav-item dropdown">
                                 	 <a class="nav-link" href="chiSiamo.jsp">Chi siamo </a>
                                 </li>
@@ -75,7 +57,6 @@
                                 <li class="nav-item dropdown">
                                 	<a class="nav-link" href="flotta.jsp">La nostra flotta </a>
                                 </li>
-                               </c:if>
                            </ul>
                             
                             <c:if test="${not loggato }">                         
@@ -91,8 +72,6 @@
                                 <a href="disconnectServlet">Disconnetti</a>
                             </div>
                             
-                            <c:if test="${not admin}">
-						    	
                             <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Il mio profilo <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -101,18 +80,8 @@
                                         <a class="dropdown-item" href="noleggi.jsp">I tuoi noleggi</a>
                                     </div>
                                 </li>
-                             </c:if>
-                             
-                             <c:if test="${admin}">
-                             <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestione <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="prenotazioni.jsp">Tutte le prenotazioni</a>
-                                        <a class="dropdown-item" href="noleggi.jsp">Tutti i noleggi</a>
-                                    </div>
-                                </li>   
+                            
                             </c:if>
-                           </c:if>
                         </div>
                     </nav>
                 </div>
@@ -120,71 +89,19 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-    
-    
-    
 
     <!-- ***** Breadcumb Area Start ***** -->
     <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg)">
     </div>
     <!-- ***** Breadcumb Area End ***** -->
-    
-    
-   <%--  <c:forEach items="${prenotazioni}" var="p">
-		  <a class="btn-toolset">
-  					<strong> 
-						ID prenotazione: ${p.idPrenotazione} Prezzo: ${p.prezzo}Euro Effettuata in data: ${p.dataPrenotazione.getDate()}/${p.dataPrenotazione.getMonth()+1}/${p.dataPrenotazione.getYear()+1900}
-					</strong>
-   			</a>
-   				<br>
-					</c:forEach> --%>
 
+    
         
         
-        <div class="limiter">
-		<div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100">
-					<table>
-						<thead>
-							<tr class="table100-head">
-								<th class="column1">IdPrenotazione</th>
-								<th class="column2">Prezzo</th>
-								<th class="column3">Data Prenotazione</th>
-								
-							</tr>
-						</thead>
-						<tbody>
-								<c:forEach items="${prenotazioni}" var="p">
-
-									<tr>
-										<td class="column1">${p.idPrenotazione}</td>
-										<td class="column2">${p.prezzo}Euro</td>
-										<td class="column3">${p.dataPrenotazione.getDate()}/${p.dataPrenotazione.getMonth()+1}/${p.dataPrenotazione.getYear()+1900}</td>
-										<!-- <td class="column4">$999.00</td>
-										<td class="column5">1</td>
-										<td class="column6">$999.00</td> -->
-									</tr>
-								</c:forEach>
-								
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    <!-- ***** Contact Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
+    <br><br><br><br><br><br><br><br>
     <footer class="dorne-footer-area">
         <div class="container-fluid">
             <div class="row">
@@ -220,8 +137,5 @@
 
     <!-- Active JS -->
     <script src="js/active.js"></script>
-    
-    
-    
 </body>
 </html>
