@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
+	
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -113,7 +113,7 @@
 
                       
 
-<br><br>
+<br>
 <p align="center">
 
 	<a id="A" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria A.png" alt=""></a>
