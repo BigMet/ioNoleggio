@@ -285,7 +285,7 @@ li.init {
     border: 2px solid $border-color;
     &:hover {
         border: 2px solid $green-color;
-        
+        background: $green-color;
         color: #fff;
     }
 }

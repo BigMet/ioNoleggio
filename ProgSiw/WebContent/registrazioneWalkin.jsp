@@ -10,6 +10,8 @@
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
@@ -86,7 +88,12 @@
                         </div>
                         <br><br>
                         <div class="form-submit">
+                        	
                             <input type="submit" value="Conferma" class="submit" id="submit" name="submit" />
+                            
+                            
+							
+						
                             <input type="submit" value="Reset" class="submit" id="reset"  name="reset" />
                         </div>
                     </form>

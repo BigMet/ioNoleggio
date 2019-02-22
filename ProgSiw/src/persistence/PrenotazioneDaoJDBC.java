@@ -220,4 +220,7 @@ public class PrenotazioneDaoJDBC implements PrenotazioneDao {
 		return prenotazioni;
 	}
 
+
+	
+
 }

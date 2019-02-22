@@ -25,16 +25,24 @@ public class Veicolo {
 		this.statoVeicolo = "DISPONIBILE";
 		
 		if(this.categoria == "a" || this.categoria == "A")
-			this.prezzo = 12.2f;
+			this.prezzo = 12f;
 		
 		else if(this.categoria == "b" || this.categoria == "B")
-			this.prezzo = 18.3f;
+			this.prezzo = 18f;
 		
 		else if(this.categoria == "c" || this.categoria == "C")
-			this.prezzo = 22.4f;
+			this.prezzo = 22f;
 		
 		else if(this.categoria == "d" || this.categoria == "D")
-			this.prezzo = 30.1f;
+			this.prezzo = 30f;
+		
+		else if(this.categoria == "i" || this.categoria == "I")
+			this.prezzo = 38f;
+		
+		else if(this.categoria == "p" || this.categoria == "P")
+			this.prezzo = 33f;
+		
+		
 		
 	}
 	
