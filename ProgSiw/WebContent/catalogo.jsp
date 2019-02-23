@@ -121,8 +121,8 @@
                 <div class="col-12">
                     <div class="section-heading dark text-center">
                         <span></span>
-                        <h4>Scopri il nostro catalogo</h4>
-                        <p>Seleziona l'auto piu' adatta alle tue esigenze</p>
+                        <h4>Seleziona l'auto</h4>
+                        <p>Scegli l'auto piu' adatta alle tue esigenze</p>
                     </div>
                 </div>
             </div>

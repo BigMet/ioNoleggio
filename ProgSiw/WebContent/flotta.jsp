@@ -95,9 +95,21 @@
     <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg)">
     </div>
     <!-- ***** Breadcumb Area End ***** -->
-
+   <section class="dorne-listing-destinations-area section-padding-100-50">
+	<div class="container">
+		<div class="row">
+                <div class="col-12">
+                    <div class="section-heading dark text-center">
+                        <span></span>
+                        <h4>Scopri il nostro catalogo</h4>
+                        <p>Individua l'auto che fa al caso tuo.</p>
+                    </div>
+                </div>
+            </div>
+           </div>
+          </section>
     
-        <br><br><br>
+        
         <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
                         <img src="img/1e2.png"  alt="immagine 1 e 2">
                        <div class="editors-pick-info">

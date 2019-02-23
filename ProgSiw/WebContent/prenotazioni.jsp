@@ -133,6 +133,19 @@
     </div>
     <!-- ***** Breadcumb Area End ***** -->
     
+     <section class="dorne-listing-destinations-area section-padding-100-50">
+	<div class="container">
+		<div class="row">
+                <div class="col-12">
+                    <div class="section-heading dark text-center">
+                        <span></span>
+                        <h4>Le tue prenotazioni</h4>
+                        <p>Qui potrai avere uno storico riguardante i veicoli da te prenotati</p>
+                    </div>
+                </div>
+            </div>
+           </div>
+          </section>
         
         <div class="limiter">
 		<div class="container-table100">
