@@ -12,10 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.Prenotazione;
-import model.Utente;
 import persistence.DAOFactory;
 import persistence.dao.PrenotazioneDao;
-import persistence.dao.UtenteDao;
 
 
 @SuppressWarnings("serial")

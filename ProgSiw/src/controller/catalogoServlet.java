@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import javax.servlet.RequestDispatcher;
@@ -14,8 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import javafx.util.Pair;
 
 
 @SuppressWarnings("serial")
@@ -53,10 +50,11 @@ public class catalogoServlet extends HttpServlet {
 			disp = req.getRequestDispatcher("index.jsp");
 			disp.forward(req, resp);
 		}else {
+			 // se non sei admin mandalo a catalogo 
 			if((Boolean)session.getAttribute("admin")==false) {
 			disp = req.getRequestDispatcher("catalogo.jsp");
 			}
-			else
+			else // se sei admin mandalo a registrazione walkin
 			disp = req.getRequestDispatcher("registrazioneWalkin.jsp");
 			disp.forward(req, resp);
 			

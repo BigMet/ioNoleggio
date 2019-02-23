@@ -23,6 +23,10 @@
 
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
+ 	
+ 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
 
 </head>
 
@@ -32,8 +36,6 @@
         <div class="dorne-load"></div>
     </div>
 
-
-    
     <!-- ***** Header Area Start ***** -->
     <header class="header_area" id="header">
         <div class="container-fluid h-100">
@@ -99,7 +101,7 @@
      <div class="dorne-contact-area d-md-flex" id="contact">
        <!--  Contact Form Area -->
         <div class="contact-form-area equal-height">
-            <div class="contact-text">
+            <!-- <div class="contact-text">
                 <h4>Riferimenti utili</h4>
                 <p>ioNoleggio è sempre al tuo fianco con il servizio di Assistenza Clienti 24h su 24 pronto a rispondere ad ogni tua esigenza</p>
                 <div class="contact-info d-lg-flex">
@@ -112,11 +114,14 @@
                         <h6><i class="fa fa-phone" aria-hidden="true"></i> +39 327 63 43 976</h6>
                     </div>
                 </div>
+            </div> -->
             </div>
-            </div>
+		<div id="map">
+         <div id="mapid" style_=" height: 180px; "></div>
+        <h6><i class="fa fa-map-signs" aria-hidden="true"></i> Via Pietro Bucci, CS</h6>
+                        <h6><i class="fa fa-map-signs" aria-hidden="true"></i> Cubo 31b</h6>
         </div> 
-        
-        
+        </div>
         
         
         
@@ -164,8 +169,26 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
     <script src="js/others/plugins.js"></script>
-
+    
     <!-- Active JS -->
     <script src="js/active.js"></script>
+    
+ <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+   
+   <script >
+   var mymap = L.map('mapid').setView([39.36313478989668,16.22600188219144], 13);
+   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZG9vbWluYXRvcjk2IiwiYSI6ImNqcXpmc2ptbjAyZnU0NG1tMWliZ2U4aHAifQ.69_g0vnKd5cqQVpKyuZVAQ', {
+	    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	    maxZoom: 18,
+	    id: 'mapbox.streets',
+	    accessToken: 'your.mapbox.access.token'
+	}).addTo(mymap);
+   
+   marker = new L.marker([39.36313478989668,16.22600188219144]).bindPopup("<b>"+"Sede ioNoleggio"+"</b>").openPopup();  
+	  marker.addTo(mymap);        
+   </script>
+    
 </body>
 </html>

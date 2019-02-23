@@ -6,6 +6,7 @@
     	<script>window.location = "indexAdmin.jsp" </script> 
     </c:if>
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,6 +35,9 @@
 </head>
 
 <body>
+<%
+  session.setAttribute("admin",false);
+%>
     <!-- Preloader -->
     <div id="preloader">
         <div class="dorne-load"></div>
@@ -152,8 +156,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+           
         
            
 
@@ -233,8 +236,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="about-content text-center">
-                        <h2>Vuoi prenotare anche il tuo hotel o B&B? </h2>
-                        <p> Il nostro noleggio offre, attraverso delle convenzioni, la possibilita' di prenotare anche un albergo. Scopri come</p>
+                        <h2>Dove vuoi, ma con noi</h2>
+                         <!-- <p> Scopri nuovi posti in giro per il mondo</p> -->
                     </div>
                 </div>
             </div>
@@ -249,7 +252,7 @@
                 <div class="col-12">
                     <div class="section-heading text-center">
                         <span></span>
-                        <h4>Clicca qui per prenotare un albergo</h4>
+                        <h4>Scopri nuovi posti in giro per il mondo</h4>
                     </div>
                 </div>
             </div>

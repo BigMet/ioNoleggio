@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 import model.Noleggio;
 import model.Utente;
 import persistence.DAOFactory;
-import persistence.UtenteDaoJDBC;
 import persistence.dao.NoleggioDao;
 import persistence.dao.PrenotazioneDao;
 import persistence.dao.UtenteDao;

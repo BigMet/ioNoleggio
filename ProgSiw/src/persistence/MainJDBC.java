@@ -3,10 +3,8 @@ package persistence;
 import java.io.FileNotFoundException;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
-import model.Prenotazione;
-import model.*;
+import model.Veicolo;
 import persistence.dao.*;
 
 
@@ -24,38 +22,41 @@ public class MainJDBC {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 		
-		util.resetDatabase();
-		util.dropDatabase();
-		util.createDatabase();
+//		util.resetDatabase();
+//		util.dropDatabase();
+//		util.createDatabase();
 		
 //		util.dropPrenotazioni();
 		
 		
 		UtenteDao utenteDao = factory.getUtenteDAO();
 		
+		utenteDao.deleteByMail("pedduwuvutt-2256@yopmail.com");
+		utenteDao.deleteByMail("p.1997.davide@gmail.com");
+		
 //		Utente utente1 = new Utente("utente", "Davide", "Perri", "pass", "n", "n", "n", "n", date1, "222",false);
-		Utente utenteAdmin = new Utente("admin", "Matteo", "Grande", "admin", "n", "n", "n", "n", date2, "333", true);
+//		Utente utenteAdmin = new Utente("admin", "Matteo", "Grande", "admin", "n", "n", "n", "n", date2, "333", true);
 //		utenteDao.save(utente1);
-		utenteDao.save(utenteAdmin);
+//		utenteDao.save(utenteAdmin);
 		
 
 
 		// creo i veicoli
 		
 		VeicoloDao veicoloDao = factory.getVeicoloDAO();
-		
-		Veicolo veicolo1 = new Veicolo("aaaaaa", "A", "FIAT", "500", date1);
-		Veicolo veicolo2 = new Veicolo("bbbbbb", "A", "PEUGEOT", "107", date1);
-		Veicolo veicolo3 = new Veicolo("cccccc", "A", "OPEL", "adam", date1);
-		Veicolo veicolo4 = new Veicolo("dddddd", "B", "FIAT", "panda", date1);
-		Veicolo veicolo5 = new Veicolo("eeeeee", "B", "RENAULT", "clio", date1);
-		Veicolo veicolo6 = new Veicolo("ffffff", "B", "TOYOTA", "yaris", date1);
-		Veicolo veicolo7 = new Veicolo("gggggg", "C", "FORD", "fiesta", date1);
-		Veicolo veicolo8 = new Veicolo("hhhhhh", "C", "CITROEN", "c3", date1);
+//		
+//		Veicolo veicolo1 = new Veicolo("aaaaaa", "A", "FIAT", "500", date1);
+//		Veicolo veicolo2 = new Veicolo("bbbbbb", "A", "PEUGEOT", "107", date1);
+//		Veicolo veicolo3 = new Veicolo("cccccc", "A", "OPEL", "adam", date1);
+//		Veicolo veicolo4 = new Veicolo("dddddd", "B", "FIAT", "panda", date1);
+//		Veicolo veicolo5 = new Veicolo("eeeeee", "B", "RENAULT", "clio", date1);
+//		Veicolo veicolo6 = new Veicolo("ffffff", "B", "TOYOTA", "yaris", date1);
+//		Veicolo veicolo7 = new Veicolo("gggggg", "C", "FORD", "fiesta", date1);
+//		Veicolo veicolo8 = new Veicolo("hhhhhh", "C", "CITROEN", "c3", date1);
 		Veicolo veicolo9 = new Veicolo("iiiiii", "D", "AUDI", "A3", date1);
 		Veicolo veicolo10 = new Veicolo("llllll","D", "VOLKSWAGEN", "golf",date1);
-		Veicolo veicolo11 = new Veicolo("mmmmmm", "I", "AUDI", "A4", date1);
-		Veicolo veicolo12 = new Veicolo("nnnnnnn","P", "CITROEN", "picasso",date1);
+//		Veicolo veicolo11 = new Veicolo("mmmmmm", "I", "AUDI", "A4", date1);
+//		Veicolo veicolo12 = new Veicolo("nnnnnnn","P", "CITROEN", "picasso",date1);
 		
 		
 //		veicoloDao.delete(veicolo1);
@@ -71,16 +72,18 @@ public class MainJDBC {
 //		veicoloDao.delete(veicolo11);
 //		veicoloDao.delete(veicolo12);
 		
-		veicoloDao.save(veicolo1);		
-		veicoloDao.save(veicolo2);	
-		veicoloDao.save(veicolo3);		
-		veicoloDao.save(veicolo4);
-		veicoloDao.save(veicolo5);		
-		veicoloDao.save(veicolo6);
-		veicoloDao.save(veicolo7);		
-		veicoloDao.save(veicolo8);
-		veicoloDao.save(veicolo11);		
-		veicoloDao.save(veicolo12);
+//		veicoloDao.save(veicolo1);		
+//		veicoloDao.save(veicolo2);	
+//		veicoloDao.save(veicolo3);		
+//		veicoloDao.save(veicolo4);
+//		veicoloDao.save(veicolo5);		
+//		veicoloDao.save(veicolo6);
+//		veicoloDao.save(veicolo7);		
+//		veicoloDao.save(veicolo8);
+		veicoloDao.save(veicolo9);		
+		veicoloDao.save(veicolo10);
+//		veicoloDao.save(veicolo11);		
+//		veicoloDao.save(veicolo12);
 		
 		
 		// fine creazione veicoli
@@ -89,6 +92,7 @@ public class MainJDBC {
 		
 		
 //	 	PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();
+	 	
 //	 	List <Prenotazione> prenotazioni = prenotazioneDao.findByCredential(1);
 //		
 //	 	System.out.println(prenotazioni);

@@ -25,6 +25,9 @@ public class disconnectServlet extends HttpServlet {
 		session.removeAttribute("loggato");
 		session.removeAttribute("nome");
 		session.removeAttribute("admin");
+		
+//		aggiunta da matteo, se non funziona rimuovere
+//		session.removeAttribute("loggato");
 	
 		
 	

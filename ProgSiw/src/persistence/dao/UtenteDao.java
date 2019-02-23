@@ -14,6 +14,7 @@ public interface UtenteDao {
 	public List<Utente> findAll();       
 	public void update(Utente utente); //Update
 	public void delete(Utente utente); //Delete	
+	public void deleteByMail(String email);
 	
 	public void setPassword(Utente utente, String password);
 	public Utente findByCredential(String username, String password);

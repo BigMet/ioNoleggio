@@ -290,4 +290,23 @@ public class UtenteDaoJDBC implements UtenteDao {
 		
 	}
 
+	@Override
+	public void deleteByMail(String email) {
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String delete = "delete FROM utente WHERE email = ? ";
+			PreparedStatement statement = connection.prepareStatement(delete);
+			statement.setString(1, email);
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+	}
+
 }

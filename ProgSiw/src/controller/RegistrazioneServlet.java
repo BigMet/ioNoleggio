@@ -5,7 +5,13 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -54,13 +60,53 @@ public class RegistrazioneServlet extends HttpServlet {
 	 		Utente nuovoUtente=new Utente(paramEmail,paramNome,paramCognome,paramPassword,paramIndirizzo,paramCodiceFiscale,paramNumCartaDiCredito,paramNumPatente,
 	 				finale,paramNumTelefono,paramAdmin);
 	 		utenteDao.save(nuovoUtente);
+	 		sendEmail(paramEmail);
 	 		resp.sendRedirect("provaLogin.jsp");
 	 	}else {
 	 		resp.sendRedirect("registrazione.jsp");
 	 	}
 	 	
+	 }
 	 	
 	 	
+	 public void sendEmail(String userEmail) {
+		 try{
+			 	String host ="smtp.gmail.com" ;
+	            String user = "siwmail001@gmail.com";
+	            String pass = "Sistemiperilweb.";
+	            String to = userEmail;
+	            String from = "siwmail001@gmail.com";
+	            String subject = "Inviata da progetto SIW";
+	            String messageText = "Questa è una mail inviata dal servizio mail di SIW, congratulazioni la registrazione è stata effettuata con Successo";
+	            boolean sessionDebug = false;
+
+	            Properties props = System.getProperties();
+
+	            props.put("mail.smtp.starttls.enable", "true");
+	            props.put("mail.smtp.host", host);
+	            props.put("mail.smtp.port", "587");
+	            props.put("mail.smtp.auth", "true");
+	            props.put("mail.smtp.starttls.required", "true");
+
+//	            java.security.Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
+	            Session mailSession = Session.getDefaultInstance(props, null);
+	            mailSession.setDebug(sessionDebug);
+	            Message msg = new MimeMessage(mailSession);
+	            msg.setFrom(new InternetAddress(from));
+	            InternetAddress[] address = {new InternetAddress(to)};
+	            msg.setRecipients(Message.RecipientType.TO, address);
+	            msg.setSubject(subject); msg.setSentDate(new Date());
+	            msg.setText(messageText);
+
+	           Transport transport=mailSession.getTransport("smtp");
+	           transport.connect(host, user, pass);
+	           transport.sendMessage(msg, msg.getAllRecipients());
+	           transport.close();
+	           System.out.println("Messaggio inviato correttamente");
+	        }catch(Exception ex)
+	        {
+	            System.out.println(ex+"problema nell'invio la mail");
+	        }
 	 }
 
 }
