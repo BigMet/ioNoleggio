@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Contatti Temp</title>
+<title>Contatti</title>
 	<meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -98,52 +98,31 @@
     <!-- ***** Breadcumb Area End ***** -->
 
     <!-- ***** Contact Area Start ***** -->
-    <div class="dorne-contact-area d-md-flex" id="contact">
-        <!-- Contact Form Area -->
+     <div class="dorne-contact-area d-md-flex" id="contact">
+       <!--  Contact Form Area -->
         <div class="contact-form-area equal-height">
-            <div class="contact-text">
-                <h4>Ecco come puoi contattarci</h4>
-                <p>I nostri collaboratori sono completamente a tua disposizione per chiarire qualunque suo dubbio. </p>
+            <!-- <div class="contact-text">
+                <h4>Riferimenti utili</h4>
+                <p>ioNoleggio è sempre al tuo fianco con il servizio di Assistenza Clienti 24h su 24 pronto a rispondere ad ogni tua esigenza</p>
                 <div class="contact-info d-lg-flex">
                     <div class="single-contact-info">
-                        <h6><i class="fa fa-envelope-o" aria-hidden="true"></i> ionoleggioassistenza@gmail.com</h6>
-                        <h6><i class="fa fa-phone" aria-hidden="true"></i> +39 0900 800680</h6>
+                        <h6><i class="fa fa-map-signs" aria-hidden="true"></i> Via Pietro Bucci, CS</h6>
+                        <h6><i class="fa fa-map-signs" aria-hidden="true"></i> Cubo 31b</h6>
+                    </div>
+                    <div class="single-contact-info">
+                        <h6><i class="fa fa-envelope-o" aria-hidden="true"></i> contatti@ioNoleggio.it</h6>
+                        <h6><i class="fa fa-phone" aria-hidden="true"></i> +39 327 63 43 976</h6>
                     </div>
                 </div>
+            </div> -->
+		<div id="map">
+		
+         <div id="mapid" style_=" height: 180px; "></div>
+        		<h6><i class="fa fa-map-signs" aria-hidden="true"></i> Via Pietro Bucci, CS</h6>
+                 <h6><i class="fa fa-map-signs" aria-hidden="true"></i> Cubo 31b</h6>
             </div>
-            <div class="contact-form">
-                <div class="contact-form-title">
-                    <h6>Contattaci</h6>
-                </div>
-                 <form action="${pageContext.request.contextPath}/assistenzaServlet" method="GET">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Nome">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <input type="email" name="email" class="form-control" placeholder="Email ">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" name="subject" class="form-control" placeholder="Oggetto">
-                        </div>
-                        <div class="col-12">
-                            <textarea name="message" class="form-control" id="Message" cols="30" rows="10" placeholder="Inserisci qui il tuo testo"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn dorne-btn">Invia</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+        </div> 
         </div>
-        <!-- Map Area -->
-        <div class="dorne-map-area equal-height">
-            <div id="map"> 
-            	<div id="mapid" style_=" height: 180px; "></div>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Contact Area End ***** -->
         
         
  
