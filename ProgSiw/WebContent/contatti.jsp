@@ -186,7 +186,7 @@
 	    accessToken: 'your.mapbox.access.token'
 	}).addTo(mymap);
    
-   marker = new L.marker([39.36313478989668,16.22600188219144]).bindPopup("<b>"+"Sede ioNoleggio"+"</b>").openPopup();  
+   	  marker = new L.marker([39.36313478989668,16.22600188219144]).bindPopup("<b>"+"Sede ioNoleggio"+"</b>").openPopup();  
 	  marker.addTo(mymap);        
    </script>
     

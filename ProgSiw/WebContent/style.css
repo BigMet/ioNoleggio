@@ -551,6 +551,11 @@ li {
     z-index: 1;
 }
 
+#mapid{
+	Height: 200px;
+	Width: 200px;
+}
+
 .hero-search-form .nav-tabs {
     border-bottom: none;
 }
