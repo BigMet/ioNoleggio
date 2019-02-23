@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Catalogo</title>
+<title>Catalogo Prova</title>
 	<meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -115,33 +115,190 @@
     </div>
 
                       
-
-<br>
-<p align="center">
-
-	<a id="A" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria A.png" alt=""></a>
-	<a id="B" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria B.png" alt=""></a>
-	
-	
-	<a id="C" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria C.png" alt=""></a>
-	<a id="D" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria D.png" alt=""></a>
-	
-	
-	<a id="I" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria I.png" alt=""></a>
-	<a id="P" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria P.png" alt=""></a>
-
-	<div id="dI" data-value="${dataInizio}"></div>
-    <div id="dF" data-value="${dataFine}"></div>
-    <div id="prezzo" data-value="${prezzo}"></div>
-</p>
-
-
-
-
+ <section class="dorne-listing-destinations-area section-padding-100-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading dark text-center">
+                        <span></span>
+                        <h4>Scopri il nostro catalogo</h4>
+                        <p>Seleziona l'auto piu' adatta alle tue esigenze</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Single Features Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-features-area mb-50">
+                        <a id="A" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria A.png" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>DA 12 Euro/giorno</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Categoria A</h5>
+                                <p>L'auto in foto e' puramente indicativa.</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Single Features Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-features-area mb-50">
+                        <a id="B" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria B.png" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>DA 18 Euro/giorno</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Categoria B</h5>
+                                <p>L'auto in foto e' puramente indicativa.</p>
+                            </div>
+                            
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Single Features Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-features-area mb-50">
+                        <a id="C" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria C.png" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>DA 22 Euro/giorno</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Categoria C</h5>
+                                <p>L'auto in foto e' puramente indicativa.</p>
+                            </div>
+                            
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Single Features Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-features-area mb-50">
+                        <a id="D" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria D.png" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>DA 30 Euro/giorno</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Categoria D</h5>
+                                <p>L'auto in foto e' puramente indicativa.</p>
+                            </div>
+                            
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Single Features Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-features-area mb-50">
+                        <a id="I" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria I.png" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>DA 35 Euro/giorno</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Categoria I</h5>
+                                <p>L'auto in foto e' puramente indicativa.</p>
+                            </div>
+                           
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Single Features Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-features-area mb-50">
+                        <a id="P" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria P.png" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>DA 33 Euro/giorno</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Categoria P</h5>
+                                <p>L'auto in foto e' puramente indicativa.</p>
+                            </div>
+                           
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Single Features Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-features-area mb-50">
+                        <a id="N" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria N.png" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>DA 25 Euro/giorno</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Categoria N</h5>
+                                <p>L'auto in foto e' puramente indicativa.</p>
+                            </div>
+                            <div class="feature-favourite">
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Single Features Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-features-area mb-50">
+                        <a id="O" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria O.png" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>DA 40 Euro/giorno</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Categoria O</h5>
+                                <p>L'auto in foto e' puramente indicativa.</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Single Features Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-features-area mb-50">
+                        <a id="L" onclick="cat(this.id)" style="cursor: pointer;"><img src="images/CatalogoAuto/Categoria L.png" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>DA 48 Euro/giorno</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Categoria L</h5>
+                                <p>L'auto in foto e' puramente indicativa.</p>
+                            </div>
+                        </div>
+                    	</a>
+                    </div>
+                </div>
+            </div>
+            <div id="dI" data-value="${dataInizio}"></div>
+		    <div id="dF" data-value="${dataFine}"></div>
+		    <div id="prezzo" data-value="${prezzo}"></div>
+        </div>
+        
+    </section>
+    <!-- ***** Listing Destinations Area End ***** -->
+    
+    
        <!--  Contact Form Area -->
-       <br><br><br><br><br><br><br><br>
         <div class="contact-form-area equal-height">
-            
             </div>
         
     

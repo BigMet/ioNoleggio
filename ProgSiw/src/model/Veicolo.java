@@ -37,10 +37,19 @@ public class Veicolo {
 			this.prezzo = 30f;
 		
 		else if(this.categoria == "i" || this.categoria == "I")
-			this.prezzo = 38f;
+			this.prezzo = 35f;
 		
 		else if(this.categoria == "p" || this.categoria == "P")
 			this.prezzo = 33f;
+		
+		else if(this.categoria == "n" || this.categoria == "N")
+			this.prezzo = 25f;
+		
+		else if(this.categoria == "l" || this.categoria == "L")
+			this.prezzo = 48f;
+		
+		else if(this.categoria == "o" || this.categoria == "O")
+			this.prezzo = 40f;
 		
 		
 		
