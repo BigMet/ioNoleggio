@@ -88,7 +88,7 @@
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     	<a class="dropdown-item" href="profilo.jsp">${nome}</a>
                                         <a class="dropdown-item" href="prenotazioniCliente">Le tue prenotazioni</a>
-                                        <a class="dropdown-item" href="noleggi.jsp">I tuoi noleggi</a>
+                                        <a class="dropdown-item" href="noleggioCliente">I tuoi noleggi</a>
                                     </div>
                                 </li>
                             </c:if>
@@ -131,11 +131,14 @@
                                         
                                  <!-- DATA INIZIO --> 
                                 <form action="${pageContext.request.contextPath}/catalogo" method="GET"> 
-                                
+                                	
+                                	<h6>&ensp;Da&ensp;</h6>
+                                	
 									<input type="date" id="start" name="trip-start"
 										       value="aaaa-mm-dd"
 										       min="aaaa-mm-dd" max="2019-12-31">
 										       
+										      <p> <h6>&ensp;A&ensp;</h6></p>
 										<!-- DATA FINE -->
 	                                 <input type="date" id="end" name="trip-end"
 										       value="aaaa-mm-dd"

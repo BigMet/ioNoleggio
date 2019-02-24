@@ -288,6 +288,7 @@
                     </div>
                 </div>
             </div>
+            
             <div id="dI" data-value="${dataInizio}"></div>
 		    <div id="dF" data-value="${dataFine}"></div>
 		    <div id="prezzo" data-value="${prezzo}"></div>

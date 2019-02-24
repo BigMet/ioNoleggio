@@ -9,7 +9,7 @@ function cat(categoria){
 			}
 			swal({
 				  title: "Sei Sicuro?",
-				  text: "Periodo dal: "+document.getElementById("dI").getAttribute("data-value")+ " Al: "+document.getElementById("dF").getAttribute("data-value")+" "+response+ " EURO",
+				  text: " Verra' effettuata una prenotazione dal: "+document.getElementById("dI").getAttribute("data-value")+ " Al: "+document.getElementById("dF").getAttribute("data-value")+" "+response+ " EURO",
 				  icon: "warning",
 				  buttons: true,
 				  dangerMode: true,

@@ -9,6 +9,8 @@ import java.util.List;
 
 import model.Noleggio;
 import persistence.dao.NoleggioDao;
+import persistence.dao.PrenotazioneDao;
+import persistence.dao.VeicoloDao;
 
 public class NoleggioDaoJDBC implements NoleggioDao{
 
@@ -55,7 +57,7 @@ public class NoleggioDaoJDBC implements NoleggioDao{
 			if (result.next()) {
 				noleggio = new Noleggio();
 				noleggio.setId(result.getInt("id"));
-				noleggio.getPrenotazione().setIdPrenotazione(result.getInt("idPrenotazione"));
+				noleggio.getPrenotazione().setIdPrenotazione(result.getInt("prenotazione"));
 				noleggio.getVeicolo().setTarga(result.getString("targa"));	
 			}
 		} catch (SQLException e) {
@@ -72,6 +74,9 @@ public class NoleggioDaoJDBC implements NoleggioDao{
 
 	@Override
 	public List<Noleggio> findAll() {
+		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+	 	VeicoloDao veicoloDao = factory.getVeicoloDAO();
+	 	PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();
 		Connection connection = this.dataSource.getConnection();
 		List<Noleggio> noleggi = new LinkedList<>();
 		try {
@@ -83,8 +88,9 @@ public class NoleggioDaoJDBC implements NoleggioDao{
 			while (result.next()) {
 				noleggio = new Noleggio();
 				noleggio.setId(result.getInt("id"));
-				noleggio.getPrenotazione().setIdPrenotazione(result.getInt("idPrenotazione"));
-				noleggio.getVeicolo().setTarga(result.getString("targa"));	noleggi.add(noleggio);
+				noleggio.setPrenotazione(prenotazioneDao.findByPrimaryKey(result.getInt("prenotazione")));
+				noleggio.setVeicolo(veicoloDao.findByPrimaryKey(result.getString("veicolo")));	
+				noleggi.add(noleggio);
 			}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
