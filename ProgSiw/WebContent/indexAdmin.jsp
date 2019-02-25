@@ -120,11 +120,12 @@
                                 <h6>Aggiungi una prenotazione</h6>
                                 <form action="${pageContext.request.contextPath}/catalogo" method="POST">
 
-			             			
+			             			<h6>&ensp;Da&ensp;</h6>
 			             			<input type="date" id="start" name="trip-start"
 										       value="aaaa-mm-dd"
 										       min="aaaa-mm-dd" max="aaaa-mm-dd">
 										       
+										 <p> <h6>&ensp;A&ensp;</h6></p>
 										<!-- DATA FINE -->
 	                                 <input type="date" id="end" name="trip-end"
 										       value="aaaa-mm-dd"
@@ -138,23 +139,9 @@
                            <div class="tab-pane fade" id="nav-rientro" role="tabpanel" aria-labelledby="nav-events-tab">
                                 <h6>Termina un noleggio</h6>
                                <form action="${pageContext.request.contextPath}/terminaNoleggio" method="GET">
-                             <!--    <input type="text" name="nomeUtente" id="idPrenotazione" placeholder="Nome">
-		                        <input type="text" name="cognomeUtente" id="idPrenotazione" placeholder="Cognome"> -->
-		                        <input type="date" id="endRent" name="rent-end"
-										       value="2019-03-01"
-										       min="2019-03-01" max="2019-12-31">
-		                        
-		             			<input type="text" name="nP" id="numPatente" placeholder="N Patente">
-		             			<input type="text" name="nC" id="numCarta" placeholder="N noleggio">
-                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
-                                    
-                                </form>
-                            </div> 
-                            
-                            <div class="tab-pane fade" id="nav-rimuovi" role="tabpanel" aria-labelledby="nav-events-tab">
-                                <h6>Rimuovi un veicolo</h6>
-                               <form action="${pageContext.request.contextPath}/rimuoviVeicolo" method="GET">
-		             			 	<input type="text" name="targa" id="targa" placeholder="Targa Veicolo"> 
+                               
+                             <input type="text" name="targa" id="targa" placeholder="Targa Veicolo"> 
+										
 			             			 	<div class="toggle-radio">
 										  <input type="radio" name="rdo" id="yes" checked>
 										  <input type="radio" name="rdo" id="no">
@@ -165,6 +152,15 @@
 										  </div>
 										</div>
 
+                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
+                                    
+                                </form>
+                            </div> 
+                            
+                            <div class="tab-pane fade" id="nav-rimuovi" role="tabpanel" aria-labelledby="nav-events-tab">
+                                <h6>Rimuovi un veicolo</h6>
+                               <form action="${pageContext.request.contextPath}/rimuoviVeicolo" method="GET">
+		             			 	<input type="text" name="targa" id="targa" placeholder="Targa Veicolo"> 
                                     <button type="submit" class="btn dorne-btn"> Conferma</button>
                                 </form>
                             </div> 
