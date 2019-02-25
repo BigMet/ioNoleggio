@@ -81,3 +81,32 @@ function creaNoleggio(){
 	
 }
 
+
+
+
+function aggiungiVeicolo(){
+	
+	console.log("hereeeeee");
+	$.ajax({
+	type:"POST",
+	data:{targa:document.getElementById("targa").value, categoria:document.getElementById("categoria").value, dataAcquisto:document.getElementById("dataAcquisto").value, casaProduttrice:document.getElementById("casaProduttrice").value, modello:document.getElementById("modello").value},
+	url:"registraVeicolo",
+	success:function(response){
+		console.log(response);
+		if(response=="veicoloPresente")
+			swal({
+				  title:"OPS!",
+				  text: "Veicolo gia' presente",
+				  icon: "error",
+		});
+		else if(response=="veicoloAggiunto")
+			swal({
+				  title:"URRA!",
+				  text: "Il veicolo e' stato aggiunto!",
+				  icon: "success",
+		});
+	}
+	
+	});
+	
+}
