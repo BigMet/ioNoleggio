@@ -187,7 +187,7 @@
 										<td class="column1">${p.idPrenotazione}</td>
 										<td class="column2">${p.prezzo}0 Euro</td>
 										<td class="column3">${p.dataPrenotazione.getDate()}/${p.dataPrenotazione.getMonth()+1}/${p.dataPrenotazione.getYear()+1900}</td>
-										<td class="column4">${categoria}</td>
+										<td class="column4">${veicoli.get(prenotazioni.indexOf(p)).categoria}</td>
 										<td class="column5"></td>
 
 									</tr>
