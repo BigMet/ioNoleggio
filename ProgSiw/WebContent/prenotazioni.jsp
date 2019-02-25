@@ -132,7 +132,7 @@
     <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg)">
     </div>
     <!-- ***** Breadcumb Area End ***** -->
-    
+    <c:if test="${not admin}"> 
      <section class="dorne-listing-destinations-area section-padding-100-50">
 	<div class="container">
 		<div class="row">
@@ -146,6 +146,24 @@
             </div>
            </div>
           </section>
+         </c:if>
+          
+        <c:if test="${admin}"> 
+       	<section class="dorne-listing-destinations-area section-padding-100-50">
+		<div class="container">
+			<div class="row">
+                <div class="col-12">
+                    <div class="section-heading dark text-center">
+                        <span></span>
+                        <h4>Tutte le prenotazione <h4>
+                        <p>Qui potrai avere uno storico riguardante i veicoli prenotati dai clienti</p>
+                    </div>
+                </div>
+            </div>
+           </div>
+          </section>
+       
+       </c:if>
         
         <div class="limiter">
 		<div class="container-table100">
@@ -171,11 +189,10 @@
 										<td class="column3">${p.dataPrenotazione.getDate()}/${p.dataPrenotazione.getMonth()+1}/${p.dataPrenotazione.getYear()+1900}</td>
 										<td class="column4">${categoria}</td>
 										<td class="column5"></td>
-										<!-- <td class="column4">$999.00</td>
-										<td class="column5">1</td>
-										<td class="column6">$999.00</td> -->
+
 									</tr>
 								</c:forEach>
+								
 								
 						</tbody>
 					</table>
