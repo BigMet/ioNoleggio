@@ -144,6 +144,7 @@
 		             			<input type="text" name="nP" id="numPatente" placeholder="N Patente">
 		             			<input type="text" name="nC" id="numCarta" placeholder="N noleggio">
                                     <button type="submit" class="btn dorne-btn"> Conferma</button>
+                                    
                                 </form>
                             </div> 
                             
