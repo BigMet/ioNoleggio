@@ -10,7 +10,7 @@
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
-    
+    <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!-- Main css -->
@@ -32,7 +32,7 @@
                 </div>
                 
                 <div class="signup-form">
-                    <form action="${pageContext.request.contextPath}/registraVeicolo" method="POST" class="register-form" id="register-form">
+                    <div class="register-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <div class="form-input">
@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="wrap-input100 validate-input m-b-20">
                                  <label for="dataAcquisto" class="required">Data Acquisto</label>
-									<input class="input100" type="date" name="dataAcquisto">
+									<input class="input100" type="date" name="dataAcquisto" id="dataAcquisto">
 									<span class="focus-input100"></span>
 								</div>
 								<br>
@@ -53,10 +53,6 @@
                             
                             <!-- fine form sinistro -->
                             <div class="form-group">
-                                <div class="form-input">
-                                    <label for="prezzo" class="required">Prezzo</label>
-                                    <input type="text" name="prezzo" id="prezzo" />
-                                </div>
                                 
                                 <div class="form-input">
                                     <label for="casaProduttrice" class="required">Casa Produttrice</label>
@@ -70,14 +66,16 @@
                                 
                                 
                             </div>
+                            
                         </div>
                         <br><br>
                         <div class="form-submit">
-                            <input type="submit" value="Conferma" class="submit" id="submit" name="submit" />
-                            <input type="submit" value="Reset" class="submit" id="reset"  name="reset" />
+                        <button onclick="aggiungiVeicolo()" class="btn dorne-btn"> Conferma</button>
+                        <a href="aggiungiVeicolo.jsp"><input type="submit" value="Reset" class="submit" id="reset"  name="reset" /></a>
+                        <a href="indexAdmin.jsp"><input type="submit" value="Home" class="submit" id="reset"  name="submit" /></a>
                         </div>
-                    </form>
-                            <a href="indexAdmin.jsp"><input type="submit" value="Home" class="submit" id="home"  name="submit" /></a>
+                    </div>
+                    <!--         <a href="indexAdmin.jsp"><input type="submit" value="Home" class="submit" id="home"  name="submit" /></a> -->
                             
                 </div>
             </div>
@@ -87,10 +85,12 @@
 
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="vendor/nouislider/nouislider.min.js"></script>
     <script src="vendor/wnumb/wNumb.js"></script>
     <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
     <script src="js/mainRegistrazione.js"></script>
+    <script src="js/custom.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
