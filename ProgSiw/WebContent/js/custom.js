@@ -136,3 +136,29 @@ function rimuoviVeicolo(){
 	});
 	
 }
+
+
+function terminaNoleggio(){
+
+	$.ajax({
+	type:"POST",
+	data:{targave:document.getElementById("targave").value, disponibile:document.getElementById("yes").checked},
+	url:"terminaNoleggio",
+	success:function(response){
+		if(response=="veicoloInesistente")
+			swal({
+				  title:"OPS!",
+				  text: "Veicolo non noleggiato, controlla la targa e riprova",
+				  icon: "error",
+		});
+		else if(response=="noleggioTerminato")
+			swal({
+				  title:"URRA!",
+				  text: "Il noleggio e' terminato!",
+				  icon: "success",
+		});
+	}
+	
+	});
+	
+}

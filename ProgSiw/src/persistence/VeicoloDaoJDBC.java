@@ -125,15 +125,14 @@ public class VeicoloDaoJDBC implements VeicoloDao {
 		try {
 			String update = "update veicolo SET categoria = ?,prezzo=?,casaproduttrice = ?,statoveicolo=?,modello= ?,dataAcquisto = ? WHERE targa=?";
 			PreparedStatement statement = connection.prepareStatement(update);
-			statement.setString(1, veicolo.getTarga());
-			statement.setString(2, veicolo.getCategoria());
-			statement.setFloat(3, veicolo.getPrezzo());
-			statement.setString(4, veicolo.getcasaProduttrice());
-			statement.setString(5, veicolo.getStatoVeicolo());
-			statement.setString(6, veicolo.getModello());
-			
+			statement.setString(1, veicolo.getCategoria());
+			statement.setFloat(2, veicolo.getPrezzo());
+			statement.setString(3, veicolo.getcasaProduttrice());
+			statement.setString(4, veicolo.getStatoVeicolo());
+			statement.setString(5, veicolo.getModello());
 			long secs = veicolo.getDataAcquisto().getTime();
-			statement.setDate(7, new java.sql.Date(secs));
+			statement.setDate(6, new java.sql.Date(secs));
+			statement.setString(7, veicolo.getTarga());
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
