@@ -54,6 +54,12 @@ function creaNoleggio(){
 				  text: "Prenotazione Inesistente!",
 				  icon: "error",
 		});
+		else if(response=="presente")
+			swal({
+				  title:"OPS!",
+				  text: "Prenotazione gia' confermata",
+				  icon: "error",
+		});
 		else{ 	
 		swal({
 			  title: "Sei Sicuro?",
