@@ -86,7 +86,6 @@ function creaNoleggio(){
 
 function aggiungiVeicolo(){
 	
-	console.log("hereeeeee");
 	$.ajax({
 	type:"POST",
 	data:{targa:document.getElementById("targa").value, categoria:document.getElementById("categoria").value, dataAcquisto:document.getElementById("dataAcquisto").value, casaProduttrice:document.getElementById("casaProduttrice").value, modello:document.getElementById("modello").value},
@@ -103,6 +102,59 @@ function aggiungiVeicolo(){
 			swal({
 				  title:"URRA!",
 				  text: "Il veicolo e' stato aggiunto!",
+				  icon: "success",
+		});
+	}
+	
+	});
+	
+}
+
+
+function rimuoviVeicolo(){
+	
+	$.ajax({
+	type:"POST",
+	data:{targav:document.getElementById("targav").value},
+	url:"rimuoviVeicolo",
+	success:function(response){
+		console.log(document.getElementById("targav").value);
+		if(response=="veicoloInesistente")
+			swal({
+				  title:"OPS!",
+				  text: "Veicolo non presente, controlla la targa e riprova",
+				  icon: "error",
+		});
+		else if(response=="veicoloRimosso")
+			swal({
+				  title:"URRA!",
+				  text: "Il veicolo e' stato rimosso!",
+				  icon: "success",
+		});
+	}
+	
+	});
+	
+}
+
+
+function terminaNoleggio(){
+
+	$.ajax({
+	type:"POST",
+	data:{targave:document.getElementById("targave").value, disponibile:document.getElementById("yes").checked},
+	url:"terminaNoleggio",
+	success:function(response){
+		if(response=="veicoloInesistente")
+			swal({
+				  title:"OPS!",
+				  text: "Veicolo non noleggiato, controlla la targa e riprova",
+				  icon: "error",
+		});
+		else if(response=="noleggioTerminato")
+			swal({
+				  title:"URRA!",
+				  text: "Il noleggio e' terminato!",
 				  icon: "success",
 		});
 	}
