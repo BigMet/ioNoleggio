@@ -27,7 +27,7 @@ import persistence.dao.VeicoloDao;
 public class RegistaVeicoloServlet extends HttpServlet {
 @Override
 protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	System.out.println("HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+
 	String paramTarga= req.getParameter("targa");
  	String paramCategoria = req.getParameter("categoria");
  	String paramData = req.getParameter("dataAcquisto");

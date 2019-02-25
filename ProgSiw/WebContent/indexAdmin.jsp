@@ -159,10 +159,10 @@
                             
                             <div class="tab-pane fade" id="nav-rimuovi" role="tabpanel" aria-labelledby="nav-events-tab">
                                 <h6>Rimuovi un veicolo</h6>
-                               <form action="${pageContext.request.contextPath}/rimuoviVeicolo" method="GET">
-		             			 	<input type="text" name="targa" id="targa" placeholder="Targa Veicolo"> 
-                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
-                                </form>
+                               <div style="display: flex">
+		             			 	<input type="text" name="targav" id="targav" placeholder="Targa Veicolo"> 
+                                      <button onclick="rimuoviVeicolo()" class="btn dorne-btn"> Conferma</button>
+                               </div>
                             </div> 
                             
                             
