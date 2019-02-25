@@ -20,7 +20,6 @@
 @import 'css/others/pe-icon-7-stroke.css';
 
 /* Base CSS */
-
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +35,8 @@
     width: 100%;
     z-index: 99999;
 }
+
+
 
 .dorne-load {
     width: 60px;

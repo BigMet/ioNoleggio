@@ -27,6 +27,8 @@
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
+    
+    <link href="css/radioButton.css" rel="stylesheet">
 
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
@@ -131,6 +133,7 @@
                                 </form>
                             </div>
                             
+                            
                             <!-- RIMANDO ALLA PAGINA IN CUI SELEZIONI TUTTI I DANNI CHE L'AUTO HA AVUTO O NO -->
                            <div class="tab-pane fade" id="nav-rientro" role="tabpanel" aria-labelledby="nav-events-tab">
                                 <h6>Termina un noleggio</h6>
@@ -151,18 +154,18 @@
                             <div class="tab-pane fade" id="nav-rimuovi" role="tabpanel" aria-labelledby="nav-events-tab">
                                 <h6>Rimuovi un veicolo</h6>
                                <form action="${pageContext.request.contextPath}/rimuoviVeicolo" method="GET">
-		             			 <input type="text" name="targa" id="targa" placeholder="Targa Veicolo">
-		             			<!-- <input type="text" name="nC" id="numCarta" placeholder="Menu a tendina">
-                                    <button type="submit" class="btn dorne-btn"> Conferma</button>  -->
-                                    <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestione <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="prenotazioniServlet">Tutte le prenotazioni</a>
-                                        <a class="dropdown-item" href="noleggioServlet">Tutti i noleggi</a>
-                                        <a class="dropdown-item" href="aggiungiVeicolo.jsp">Aggiungi veicolo</a>
-                                        
-                                    </div>
-                                </li>
+		             			 	<input type="text" name="targa" id="targa" placeholder="Targa Veicolo"> 
+			             			 	<div class="toggle-radio">
+										  <input type="radio" name="rdo" id="yes" checked>
+										  <input type="radio" name="rdo" id="no">
+										  <div class="switch">
+										    <label for="yes">Disponibile</label>
+										    <label for="no">Indisponibile</label>
+										    <span></span>
+										  </div>
+										</div>
+
+                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
                                 </form>
                             </div> 
                             
@@ -224,6 +227,7 @@
     <!-- Active JS -->
     <script src="js/active.js"></script>
     <script src="js/custom.js"></script>
+    <!-- <script src="js/radioButton.js"></script> -->
     
     
 </body>
