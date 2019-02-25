@@ -15,11 +15,14 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 
+	
+	
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/slideshow.css" >
 
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
@@ -107,10 +110,11 @@
                 </div>
             </div>
            </div>
-          </section>
+       </section>
     
+
         
-        <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
+         <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
                         <img src="img/1e2.png"  alt="immagine 1 e 2">
                        <div class="editors-pick-info">
                            
@@ -135,7 +139,7 @@
                             <div class="add-more">
                             </div>
                         </div>
-                    </div>
+                    </div> 
         
     <!-- ***** Contact Area End ***** -->
 
@@ -164,7 +168,8 @@
         </div>
     </footer>
     <!-- ****** Footer Area End ****** -->
-
+    
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -176,5 +181,7 @@
 
     <!-- Active JS -->
     <script src="js/active.js"></script>
+    <script src="js/slideshowjs.js"></script>
+    
 </body>
 </html>

@@ -1,17 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
     
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Chi Siamo</title>
+<title>Chi Siamo Temp</title>
 	<meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 
     <!-- Favicon -->
@@ -22,15 +23,20 @@
 
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
+ 	
+
+  
+      <link rel="stylesheet" href="css/slideshow.css"> 
+
 </head>
+
 <body>
     <!-- Preloader -->
     <div id="preloader">
         <div class="dorne-load"></div>
     </div>
 
-
-     <!-- ***** Header Area Start ***** -->
+    <!-- ***** Header Area Start ***** -->
     <header class="header_area" id="header">
         <div class="container-fluid h-100">
             <div class="row h-100">
@@ -53,7 +59,7 @@
                                 <li class="nav-item dropdown">
                                 	<a class="nav-link" href="flotta.jsp">La nostra flotta </a>
                                 </li>
-							</ul>
+                           </ul>
                             
                             <c:if test="${not loggato }">                         
                             <!-- Signin btn -->
@@ -68,9 +74,7 @@
                                 <a href="disconnectServlet">Disconnetti</a>
                             </div>
                             
-                            
-						    	
-                            <li class="nav-item dropdown">
+                           <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Il mio profilo <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     	<a class="dropdown-item" href="profilo.jsp">${nome}</a>
@@ -78,7 +82,6 @@
                                         <a class="dropdown-item" href="noleggioCliente">I tuoi noleggi</a>
                                     </div>
                                 </li>
-						    
                             
                             </c:if>
                         </div>
@@ -89,11 +92,11 @@
     </header>
     <!-- ***** Header Area End ***** -->
 
-
     <!-- ***** Breadcumb Area Start ***** -->
     <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg)">
     </div>
     <!-- ***** Breadcumb Area End ***** -->
+    
     <section class="dorne-listing-destinations-area section-padding-100-50">
 		<div class="container">
 			<div class="row">
@@ -101,13 +104,14 @@
 	                    <div class="section-heading dark text-center">
 	                        <span></span>
 	                        <h4>Chi Siamo</h4>
-	                        <p>Scopri la nostra storia</p>
+	                        <p>Una breve illustrazione sulla nostra storia</p>
 	                    </div>
 	                </div>
 	            </div>
 	           </div>
           </section>
 
+    <!-- ***** Contact Area Start ***** -->
     <div class="dorne-contact-area d-md-flex" id="contact">
         <!-- Contact Form Area -->
         <div class="contact-form-area equal-height">
@@ -121,8 +125,31 @@
          
               </div>  
             </div> 
-            </div>
+            
+            
+            
         </div>
+        <!-- Map Area -->
+        <div class="dorne-map-area equal-height">
+            <div class="bss-slides demo1" tabindex="1" autofocus="autofocus">
+            <figure>
+		      <img src="img/img1.jpg" width="100%" />
+            </figure>
+            
+            <figure>
+		      <img src="img/img2.jpg" width="100%" />
+            </figure>
+           
+        </div> 
+        </div>
+    </div>
+    <!-- ***** Contact Area End ***** -->
+        
+        
+ 
+        
+        
+    <!-- ***** Contact Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
     <footer class="dorne-footer-area">
@@ -130,19 +157,13 @@
             <div class="row">
                 <div class="col-12 d-md-flex align-items-center justify-content-between">
                     <div class="footer-text">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> A cura di Matteo e Davide | Un semplice sito di noleggio by M&D
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
                     
-  
-	<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> A cura di Matteo e Davide | Un semplice sito di noleggio by M&D </p>
-	
-                        
-                    </div>
-                    <div class="footer-social-btns">
-                        <a href="#"><i class="fa fa-linkedin" aria-haspopup="true"></i></a>
-                        <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-haspopup="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-haspopup="true"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -157,8 +178,13 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
     <script src="js/others/plugins.js"></script>
-
+    
     <!-- Active JS -->
     <script src="js/active.js"></script>
+    
+	<script src="https://leemark.github.io/better-simple-slideshow/demo/js/hammer.min.js"></script><!-- for swipe support on touch interfaces -->
+  
+    <script  src="js/slideshow.js"></script>
+    
 </body>
 </html>
