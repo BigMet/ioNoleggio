@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,13 +32,23 @@ public class cercaPrenotazioneServlet extends HttpServlet {
 		
 //		System.out.println(req.getParameter("idP"));
 		int paramIdPrenotazione= Integer.parseInt(req.getParameter("idP"));
-		
+		Boolean presente=false;
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		PrenotazioneDao prenotazioneDao = factory.getPrenotazioneDAO();
+		NoleggioDao noleggioDao = factory.getNoleggioDAO();
+		List<Noleggio> noleggi = noleggioDao.findAll();
+		for (Noleggio n : noleggi) {
+			if(n.getPrenotazione().getIdPrenotazione()==paramIdPrenotazione) {
+				presente=true;
+				break;
+			}
+		}
 		PrintWriter out=resp.getWriter();
 		
 		if(prenotazioneDao.findByPrimaryKey(paramIdPrenotazione)==null)
 			out.write("notfound");
+		else if(presente)
+			out.write("presente");
 		else {
 			out.write(String.valueOf(prenotazioneDao.findByPrimaryKey(paramIdPrenotazione).getPrezzo()));
 		}
