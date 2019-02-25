@@ -155,7 +155,7 @@
                 <div class="col-12">
                     <div class="section-heading dark text-center">
                         <span></span>
-                        <h4>Tutte le prenotazione <h4>
+                        <h4>Tutte le prenotazioni <h4>
                         <p>Qui potrai avere uno storico riguardante i veicoli prenotati dai clienti</p>
                     </div>
                 </div>
@@ -200,13 +200,6 @@
 			</div>
 		</div>
 	</div>
-        
-        
-        
-        
-        
-        
-        
         
         
         

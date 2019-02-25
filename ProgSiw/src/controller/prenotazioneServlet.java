@@ -60,6 +60,8 @@ public class prenotazioneServlet extends HttpServlet {
 		session.setAttribute("prezzo", prenotazione.getPrezzo());
 		
 		
+		
+		
 	}
 	
 }
