@@ -113,6 +113,7 @@
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="prenotazioniServlet">Tutte le prenotazioni</a>
                                         <a class="dropdown-item" href="noleggioServlet">Tutti i noleggi</a>
+                                        <a class="dropdown-item" href="aggiungiVeicolo.jsp">Aggiungi veicolo</a>
                                     </div>
                                 </li>   
                             </c:if>
@@ -134,17 +135,17 @@
     <!-- ***** Breadcumb Area End ***** -->
     <c:if test="${not admin}"> 
      <section class="dorne-listing-destinations-area section-padding-100-50">
-	<div class="container">
-		<div class="row">
-                <div class="col-12">
-                    <div class="section-heading dark text-center">
-                        <span></span>
-                        <h4>Le tue prenotazioni</h4>
-                        <p>Qui potrai avere uno storico riguardante i veicoli da te prenotati</p>
-                    </div>
-                </div>
-            </div>
-           </div>
+		<div class="container">
+			<div class="row">
+	                <div class="col-12">
+	                    <div class="section-heading dark text-center">
+	                        <span></span>
+	                        <h4>Le tue prenotazioni</h4>
+	                        <p>Qui potrai avere uno storico riguardante i veicoli da te prenotati</p>
+	                    </div>
+	                </div>
+	            </div>
+	           </div>
           </section>
          </c:if>
           
