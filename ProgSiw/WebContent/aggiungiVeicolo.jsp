@@ -49,23 +49,6 @@
 									<span class="focus-input100"></span>
 								</div>
 								<br>
-								<!-- <div class="form-input">
-                                    <label for="prezzo" class="required">Prezzo</label>
-                                    <input type="text" name="prezzo" id="prezzo" />
-                                </div>
-                                
-                                <div class="form-input">
-                                    <label for="casaProduttrice" class="required">Casa Produttrice</label>
-                                    <input type="text" name="casaProduttrice" id="casaProduttrice" />
-                                </div>
-                                
-                                 <div class="form-input">
-                                    <label for="modello" class="required">Modello</label>
-                                    <input type="text" name="modello" id="modello" />
-                                </div> -->
-                                
-                                
-                                
                             </div>
                             
                             <!-- fine form sinistro -->

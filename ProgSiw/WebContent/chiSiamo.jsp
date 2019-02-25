@@ -94,6 +94,19 @@
     <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg)">
     </div>
     <!-- ***** Breadcumb Area End ***** -->
+    <section class="dorne-listing-destinations-area section-padding-100-50">
+		<div class="container">
+			<div class="row">
+	                <div class="col-12">
+	                    <div class="section-heading dark text-center">
+	                        <span></span>
+	                        <h4>Chi Siamo</h4>
+	                        <p>Scopri la nostra storia</p>
+	                    </div>
+	                </div>
+	            </div>
+	           </div>
+          </section>
 
     <div class="dorne-contact-area d-md-flex" id="contact">
         <!-- Contact Form Area -->

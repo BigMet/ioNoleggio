@@ -3,26 +3,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="css/radioButton.css" rel="stylesheet">
-<meta charset="ISO-8859-1">
-<title>Prova</title>
+  <meta charset="UTF-8">
+  <title>Automatic / Manual Slideshow</title>
+  <meta name="viewport" content="width=device-width">
+  
+  
+      <link rel="stylesheet" href="css/slideshow.css">
+
+  
 </head>
+
 <body>
 
-		             			 	
-		             			 	
-         	<div class="toggle-radio">
-									  <input type="radio" name="rdo" id="yes" checked>
-									  <input type="radio" name="rdo" id="no">
-									  <div class="switch">
-									    <label for="yes">Disponibile</label>
-									    <label for="no">Non Disponibile</label>
-									    <span></span>
-									  </div>
-									</div>
+  <div class=container>
+  <a href="#" class="arrowL">&lt;</a>
+  <div id="slideshow">
+    <div><img src="img/1e2.png"/></div>
+    <div class="hidden"><img src="img/3e4.png"/></div>
+    <div class="hidden"><img src="img/5e6.png"/></div>
+  </div>
+  <a href="#" class="arrowR">&gt;</a>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 		    
-		    <script src="js/radioButton.js"></script>
-		    
+	<script src="js/slideshowjs.js"></script>
 		    
 
 </body>
