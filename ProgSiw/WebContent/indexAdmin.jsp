@@ -40,22 +40,6 @@
         <div class="dorne-load"></div>
     </div>
 
-    <!-- ***** Search Form Area ***** -->
-    <div class="dorne-search-form d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="search-close-btn" id="closeBtn">
-                        <i class="pe-7s-close-circle" aria-hidden="true"></i>
-                    </div>
-                    <form action="#" method="get">
-                        <input type="search" name="caviarSearch" id="search" placeholder="Search Your Desire Destinations or Events">
-                        <input type="submit" class="d-none" value="submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- ***** Header Area Start ***** -->
     <header class="header_area" id="header">
@@ -115,6 +99,7 @@
                             <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Conferma</a>
                             <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false">Walk-in</a>
                             <a class="nav-item nav-link" id="nav-rientro-tab" data-toggle="tab" href="#nav-rientro" role="tab" aria-controls="nav-events" aria-selected="false">Rientro</a>
+                        	<a class="nav-item nav-link" id="nav-rimuovi-tab" data-toggle="tab" href="#nav-rimuovi" role="tab" aria-controls="nav-events" aria-selected="false">Rimuovi</a>
                         </div>
                         <!-- Tabs Content -->
                         <div class="tab-content" id="nav-tabContent">
@@ -159,6 +144,24 @@
 		             			<input type="text" name="nP" id="numPatente" placeholder="N Patente">
 		             			<input type="text" name="nC" id="numCarta" placeholder="N noleggio">
                                     <button type="submit" class="btn dorne-btn"> Conferma</button>
+                                </form>
+                            </div> 
+                            
+                            <div class="tab-pane fade" id="nav-rimuovi" role="tabpanel" aria-labelledby="nav-events-tab">
+                                <h6>Rimuovi un veicolo</h6>
+                               <form action="${pageContext.request.contextPath}/rimuoviVeicolo" method="GET">
+		             			 <input type="text" name="targa" id="targa" placeholder="Targa Veicolo">
+		             			<!-- <input type="text" name="nC" id="numCarta" placeholder="Menu a tendina">
+                                    <button type="submit" class="btn dorne-btn"> Conferma</button>  -->
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestione <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="prenotazioniServlet">Tutte le prenotazioni</a>
+                                        <a class="dropdown-item" href="noleggioServlet">Tutti i noleggi</a>
+                                        <a class="dropdown-item" href="aggiungiVeicolo.jsp">Aggiungi veicolo</a>
+                                        
+                                    </div>
+                                </li>
                                 </form>
                             </div> 
                             
