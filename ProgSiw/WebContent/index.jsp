@@ -38,6 +38,7 @@
 <%
 if(session.getAttribute("admin")==null)
   session.setAttribute("admin",false);
+
 %>
     <!-- Preloader -->
     <div id="preloader">
