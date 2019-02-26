@@ -30,9 +30,11 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
  	NoleggioDao noleggioDao = factory.getNoleggioDAO();
  	VeicoloDao veicoloDao = factory.getVeicoloDAO();
  	List<Noleggio> noleggi=noleggioDao.findAll();
+ 	Noleggio temp;
  	for (Noleggio n : noleggi) {
 		if(n.getVeicolo().getTarga().equals(paramTarga)) {
 			presente=true;
+			temp=n;
 			break;
 		}
 	}

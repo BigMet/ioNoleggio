@@ -73,6 +73,7 @@ function creaNoleggio(){
 					    	url:"cercaPrenotazione",
 					    	data:{idP:document.getElementById("idPrenotazione").value,nP:document.getElementById("numPatente").value,nC:document.getElementById("numCarta").value},
 					    });
+					    swal("Perfetto! Noleggio Confermato");
 				  }
 					    });}
 	}
