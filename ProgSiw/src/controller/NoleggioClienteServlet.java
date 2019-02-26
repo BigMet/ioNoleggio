@@ -28,6 +28,7 @@ public class NoleggioClienteServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session=req.getSession();
 		
+		
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 	 	NoleggioDao noleggioDao = factory.getNoleggioDAO();
 	 	List <Noleggio> noleggi = noleggioDao.findAll();
@@ -37,7 +38,7 @@ public class NoleggioClienteServlet extends HttpServlet {
 				daRimuovere.add(n);
 		}
 	 	for (Noleggio n : daRimuovere) {
-	 		noleggi.add(n);
+	 		noleggi.remove(n);
 		}
 	 	session.setAttribute("noleggi", noleggi);
 	 	RequestDispatcher disp;

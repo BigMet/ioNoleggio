@@ -37,6 +37,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 			temp=n;
 			break;
 		}
+		
 	}
  	PrintWriter out=resp.getWriter();
  	if(presente) {
