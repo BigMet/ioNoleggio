@@ -56,15 +56,13 @@
                                 
                                 <div class="form-input">
                                     <label for="casaProduttrice" class="required">Casa Produttrice</label>
-                                    <input type="text" name="casaProduttrice" id="casaProduttrice" required/>
+                                    <input type="text" name="casaProduttrice" required id="casaProduttrice" />
                                 </div>
                                 
                                  <div class="form-input">
                                     <label for="modello" class="required">Modello</label>
                                     <input type="text" name="modello" id="modello" required/>
                                 </div>
-                                
-                                
                             </div>
                             
                         </div>
@@ -72,7 +70,7 @@
                         <div class="form-submit">
                         <button onclick="aggiungiVeicolo()" class="btn dorne-btn"> Conferma</button>
                         <a href="aggiungiVeicolo.jsp"><input type="submit" value="Reset" class="submit" id="reset"  name="reset" /></a>
-                        <a href="indexAdmin.jsp"><input type="submit" value="Home" class="submit" id="reset"  name="submit" /></a>
+                        <a href="indexAdmin.jsp"><input type="submit" value="Home" class="submit"   name="submit" /></a>
                         </div>
                     </div>
                     <!--         <a href="indexAdmin.jsp"><input type="submit" value="Home" class="submit" id="home"  name="submit" /></a> -->

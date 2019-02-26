@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
     
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href="style.css" rel="stylesheet">
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
@@ -92,9 +91,9 @@
                         	
                             <input type="submit" value="Conferma" class="submit" id="submit" name="submit" />
                             <input type="submit" value="Reset" class="submit" id="reset"  name="reset" />
-                            <a href="indexAdmin.jsp"><input type="submit" value="Home" class="submit" id="reset"  name="submit" /></a>
                         </div>
                     </form>
+                            <a href="indexAdmin.jsp"><input type="submit" value="Home" class="submit" id="reset" name="submit" /></a>
                 </div>
             </div>
         </div>
