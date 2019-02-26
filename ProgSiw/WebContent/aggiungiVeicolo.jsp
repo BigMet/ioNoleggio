@@ -37,15 +37,15 @@
                             <div class="form-group">
                                 <div class="form-input">
                                     <label for="targa" class="required">Targa</label>
-                                    <input type="text" name="targa" id="targa" />
+                                    <input type="text" name="targa"  id="targa" required>
                                 </div>
                                 <div class="form-input">
                                     <label for="categoria" class="required">Categoria</label>
-                                    <input type="text" name="categoria" id="categoria" />
+                                    <input type="text" name="categoria" id="categoria" required/>
                                 </div>
                                 <div class="wrap-input100 validate-input m-b-20">
                                  <label for="dataAcquisto" class="required">Data Acquisto</label>
-									<input class="input100" type="date" name="dataAcquisto" id="dataAcquisto">
+									<input class="input100" type="date" value="1997-01-01" name="dataAcquisto" id="dataAcquisto" required>
 									<span class="focus-input100"></span>
 								</div>
 								<br>
@@ -56,12 +56,12 @@
                                 
                                 <div class="form-input">
                                     <label for="casaProduttrice" class="required">Casa Produttrice</label>
-                                    <input type="text" name="casaProduttrice" id="casaProduttrice" />
+                                    <input type="text" name="casaProduttrice" id="casaProduttrice" required/>
                                 </div>
                                 
                                  <div class="form-input">
                                     <label for="modello" class="required">Modello</label>
-                                    <input type="text" name="modello" id="modello" />
+                                    <input type="text" name="modello" id="modello" required/>
                                 </div>
                                 
                                 

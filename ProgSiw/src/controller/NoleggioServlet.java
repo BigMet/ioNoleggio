@@ -12,10 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.Noleggio;
-import model.Prenotazione;
 import persistence.DAOFactory;
 import persistence.dao.NoleggioDao;
-import persistence.dao.PrenotazioneDao;
 
 /**
  * Servlet implementation class NoleggioServlet
