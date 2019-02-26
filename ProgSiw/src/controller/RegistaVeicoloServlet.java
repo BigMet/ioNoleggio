@@ -33,6 +33,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
  	String paramModello = req.getParameter("modello");
  	if(paramTarga==""||paramCategoria==""||paramCasaProduttrice==""||paramModello=="")
  		resp.sendRedirect("aggiungiVeicolo.jsp");
+ 	
  	HttpSession session = req.getSession();
  	
  	DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
