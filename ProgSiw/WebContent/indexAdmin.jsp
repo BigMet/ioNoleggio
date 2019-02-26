@@ -134,7 +134,9 @@
 	                                 <input type="date" id="end" name="trip-end"
 										       min="1997-01-01" max="2019-12-31">
 										       <script>
-										document.getElementById('end').value = new Date().toISOString().substring(0, 10);
+										       var fine = new Date();
+										       fine.setDate(fine.getDate()+1);
+										document.getElementById('end').value = fine.toISOString().substring(0, 10);
 											</script>
 										       
 	                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
