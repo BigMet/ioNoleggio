@@ -42,11 +42,15 @@ public class RegistrazioneServlet extends HttpServlet {
 	 	String paramNumTelefono = req.getParameter("numtelefono");
 	 	
 
+	 	if(paramNome=="" || paramCognome=="" || paramPassword=="" || paramEmail=="" || paramIndirizzo=="")
+	 		resp.sendRedirect("registrazione.jsp");
 	 	
+	 else {
 	 	DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 	 	UtenteDao utenteDao = factory.getUtenteDAO();
 	 	Utente utente = utenteDao.findByEmail(paramEmail);
 	 	
+	 
 	 	if(utente==null) {
 	 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	 		boolean paramAdmin= Boolean.parseBoolean(req.getParameter("admin"));
@@ -65,8 +69,9 @@ public class RegistrazioneServlet extends HttpServlet {
 	 	}else {
 	 		resp.sendRedirect("registrazione.jsp");
 	 	}
-	 	
 	 }
+	 	
+	}
 	 	
 	 	
 	 public void sendEmail(String userEmail) {
