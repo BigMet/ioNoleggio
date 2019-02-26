@@ -9,12 +9,16 @@ public class Noleggio {
 	private int id;
 	private Prenotazione prenotazione;
 	private Veicolo veicolo;
+	private String stato;
+	
 	
 
 	public Noleggio(Prenotazione prenotazione, Veicolo veicolo) {
 		super();
 		this.prenotazione = prenotazione;
 		this.veicolo = veicolo;
+		this.stato = "";
+		
 	}
 	
 	
@@ -47,10 +51,24 @@ public class Noleggio {
 		this.veicolo = veicolo;
 	}
 	
+	
+
+	public String getStato() {
+		return stato;
+	}
+
+
+	public void setStato(String stato) {
+		this.stato = stato;
+	}
+
+
 	@Override
 	public String toString() {
-		return "Noleggio [id=" + id + ", prenotazione=" + prenotazione + ", veicolo=" + veicolo + "]";
+		return "Noleggio [id=" + id + ", prenotazione=" + prenotazione + ", veicolo=" + veicolo + ", stato=" + stato
+				+ "]";
 	}
+	
 	
 	
 }

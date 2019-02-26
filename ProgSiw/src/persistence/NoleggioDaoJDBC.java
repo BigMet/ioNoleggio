@@ -26,12 +26,13 @@ public class NoleggioDaoJDBC implements NoleggioDao{
 		try {
 			int id = IdBroker.getId(connection);
 			noleggio.setId(id);
-			String insert = "insert into noleggio(id, prenotazione,veicolo) values (?,?,?)";
+			String insert = "insert into noleggio(id, prenotazione,veicolo,stato) values (?,?,?,?)";
 			PreparedStatement statement = connection.prepareStatement(insert);
 			
 			statement.setInt(1, noleggio.getId());
 			statement.setInt(2, noleggio.getPrenotazione().getIdPrenotazione());
-			statement.setString(3, noleggio.getVeicolo().getTarga());		
+			statement.setString(3, noleggio.getVeicolo().getTarga());
+			statement.setString(4, noleggio.getStato());	
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -59,6 +60,7 @@ public class NoleggioDaoJDBC implements NoleggioDao{
 				noleggio.setId(result.getInt("id"));
 				noleggio.getPrenotazione().setIdPrenotazione(result.getInt("prenotazione"));
 				noleggio.getVeicolo().setTarga(result.getString("targa"));	
+				noleggio.setStato(result.getString("stato"));
 			}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -89,7 +91,8 @@ public class NoleggioDaoJDBC implements NoleggioDao{
 				noleggio = new Noleggio();
 				noleggio.setId(result.getInt("id"));
 				noleggio.setPrenotazione(prenotazioneDao.findByPrimaryKey(result.getInt("prenotazione")));
-				noleggio.setVeicolo(veicoloDao.findByPrimaryKey(result.getString("veicolo")));	
+				noleggio.setVeicolo(veicoloDao.findByPrimaryKey(result.getString("veicolo")));
+				noleggio.setStato(result.getString("stato"));
 				noleggi.add(noleggio);
 			}
 		} catch (SQLException e) {
@@ -113,6 +116,7 @@ public class NoleggioDaoJDBC implements NoleggioDao{
 			statement.setInt(1, noleggio.getId());
 			statement.setInt(2, noleggio.getPrenotazione().getIdPrenotazione());
 			statement.setString(3, noleggio.getVeicolo().getTarga());
+			statement.setString(4, noleggio.getStato());	
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
