@@ -22,22 +22,12 @@ public class MainJDBC {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 		
-//		util.resetDatabase();
-//		util.dropDatabase();
-//		util.createDatabase();
-		
-//		util.dropPrenotazioni();
+		util.resetDatabase();
+		util.dropDatabase();
+		util.createDatabase();
 		
 		
-		UtenteDao utenteDao = factory.getUtenteDAO();
-		
-		utenteDao.deleteByMail("pedduwuvutt-2256@yopmail.com");
-		utenteDao.deleteByMail("p.1997.davide@gmail.com");
-		
-//		Utente utente1 = new Utente("utente", "Davide", "Perri", "pass", "n", "n", "n", "n", date1, "222",false);
-//		Utente utenteAdmin = new Utente("admin", "Matteo", "Grande", "admin", "n", "n", "n", "n", date2, "333", true);
-//		utenteDao.save(utente1);
-//		utenteDao.save(utenteAdmin);
+//		UtenteDao utenteDao = factory.getUtenteDAO();
 		
 
 
@@ -53,8 +43,8 @@ public class MainJDBC {
 //		Veicolo veicolo6 = new Veicolo("ffffff", "B", "TOYOTA", "yaris", date1);
 //		Veicolo veicolo7 = new Veicolo("gggggg", "C", "FORD", "fiesta", date1);
 //		Veicolo veicolo8 = new Veicolo("hhhhhh", "C", "CITROEN", "c3", date1);
-		Veicolo veicolo9 = new Veicolo("iiiiii", "D", "AUDI", "A3", date1);
-		Veicolo veicolo10 = new Veicolo("llllll","D", "VOLKSWAGEN", "golf",date1);
+//		Veicolo veicolo9 = new Veicolo("iiiiii", "D", "AUDI", "A3", date1);
+//		Veicolo veicolo10 = new Veicolo("llllll","D", "VOLKSWAGEN", "golf",date1);
 //		Veicolo veicolo11 = new Veicolo("mmmmmm", "I", "AUDI", "A4", date1);
 //		Veicolo veicolo12 = new Veicolo("nnnnnnn","P", "CITROEN", "picasso",date1);
 		
@@ -80,8 +70,8 @@ public class MainJDBC {
 //		veicoloDao.save(veicolo6);
 //		veicoloDao.save(veicolo7);		
 //		veicoloDao.save(veicolo8);
-		veicoloDao.save(veicolo9);		
-		veicoloDao.save(veicolo10);
+//		veicoloDao.save(veicolo9);		
+//		veicoloDao.save(veicolo10);
 //		veicoloDao.save(veicolo11);		
 //		veicoloDao.save(veicolo12);
 		

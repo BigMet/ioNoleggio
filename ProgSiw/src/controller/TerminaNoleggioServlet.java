@@ -47,7 +47,8 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
  		
  		else
  			up.setStatoVeicolo("INDISPONIBILE");
- 		
+ 		temp.setStato("TERMINATO");
+ 		noleggioDao.update(temp);
  		veicoloDao.update(up);
  		out.write("noleggioTerminato");
  			
