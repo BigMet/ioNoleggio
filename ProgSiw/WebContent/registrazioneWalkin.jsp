@@ -44,17 +44,17 @@
                                 </div>
                                 <div class="wrap-input100 validate-input m-b-20">
                                  <label for="dataDiNascita" class="required">Data di nascita</label>
-									<input class="input100" type="date" name="datanascita">
+									<input class="input100" type="date" value="1997-01-01" name="datanascita">
 									<span class="focus-input100"></span>
 								</div>
 								<br>
 								<div class="form-input">
-                                    <label for="CodiceFiscale" class="required">Codice Fiscale</label>
+                                    <label for="CodiceFiscale" >Codice Fiscale</label>
                                     <input type="text" name="codicefiscale" id="codicefiscale" />
                                 </div>
                                 
                                 <div class="form-input">
-                                    <label for="Indirizzo" class="required">Indirizzo</label>
+                                    <label for="Indirizzo" >Indirizzo</label>
                                     <input type="text" name="indirizzo" id="indirizzo" />
                                 </div>
                                 
@@ -69,17 +69,17 @@
                                     <input type="text" name="phone_number" id="phone_number" />
                                 </div>
                                 <div class="form-input">
-                                    <label for="email" > Email</label>
+                                    <label for="email" class="required"> Email</label>
                                     <input type="text" name="email" id="email" />
                                 </div>
                                 
                                 <div class="form-input">
-                                    <label for="cartaDc" class="required">Carta di credito</label>
+                                    <label for="cartaDc" >Carta di credito</label>
                                     <input type="text" name="cartaDc" id="cartaDc" />
                                 </div>
                                 
                                 <div class="form-input">
-                                    <label for="numPatente" class="required">Numero patente</label>
+                                    <label for="numPatente" >Numero patente</label>
                                     <input type="text" name="numPatente" id="numPatente" />
                                 </div>
                                 
@@ -91,6 +91,7 @@
                         	
                             <input type="submit" value="Conferma" class="submit" id="submit" name="submit" />
                             <input type="submit" value="Reset" class="submit" id="reset"  name="reset" />
+                            <a href="indexAdmin.jsp"><input type="submit" value="Home" class="submit" id="reset"  name="submit" /></a>
                         </div>
                     </form>
                 </div>
