@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
@@ -5,6 +6,7 @@
 <c:if test="${admin}">
     	<script>window.location = "indexAdmin.jsp" </script> 
     </c:if>
+
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -38,6 +40,8 @@
 <%
 if(session.getAttribute("admin")==null)
   session.setAttribute("admin",false);
+Date oggi=new Date();
+session.setAttribute("oggi", oggi);
 %>
     <!-- Preloader -->
     <div id="preloader">
@@ -136,14 +140,19 @@ if(session.getAttribute("admin")==null)
                                 	<h6>&ensp;Da&ensp;</h6>
                                 	
 									<input type="date" id="start" name="trip-start"
-										       value="aaaa-mm-dd"
-										       min="aaaa-mm-dd" max="2019-12-31">
+										       min="1997-01-01" max="2019-12-31">
+										  <script>
+										document.getElementById('start').value = new Date().toISOString().substring(0, 10);
+											</script>
+										       
 										       
 										      <p> <h6>&ensp;A&ensp;</h6></p>
 										<!-- DATA FINE -->
 	                                 <input type="date" id="end" name="trip-end"
-										       value="aaaa-mm-dd"
-										       min="aaaa-mm-dd" max="2019-12-31">
+										       min="1997-01-01" max="2019-12-31">
+										       <script>
+										document.getElementById('end').value = new Date().toISOString().substring(0, 10);
+											</script>
 	 
 	 								<!-- <div class="container-login100-form-btn"> -->
 	                                    <button type="submit" class="btn dorne-btn">

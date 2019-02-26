@@ -121,15 +121,22 @@
                                 <form action="${pageContext.request.contextPath}/catalogo" method="POST">
 
 			             			<h6>&ensp;Da&ensp;</h6>
-			             			<input type="date" id="start" name="trip-start"
-										       value="aaaa-mm-dd"
-										       min="aaaa-mm-dd" max="aaaa-mm-dd">
+                                	
+									<input type="date" id="start" name="trip-start"
+										       min="1997-01-01" max="2019-12-31">
+										  <script>
+										document.getElementById('start').value = new Date().toISOString().substring(0, 10);
+											</script>
 										       
-										 <p> <h6>&ensp;A&ensp;</h6></p>
+										       
+										      <p> <h6>&ensp;A&ensp;</h6></p>
 										<!-- DATA FINE -->
 	                                 <input type="date" id="end" name="trip-end"
-										       value="aaaa-mm-dd"
-										       min="aaaa-mm-dd" max="aaaa-mm-dd">
+										       min="1997-01-01" max="2019-12-31">
+										       <script>
+										document.getElementById('end').value = new Date().toISOString().substring(0, 10);
+											</script>
+										       
 	                                    <button type="submit" class="btn dorne-btn"> Conferma</button>
                                 </form>
                             </div>
