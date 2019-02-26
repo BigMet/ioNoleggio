@@ -139,6 +139,10 @@
             <figure>
 		      <img src="img/img2.jpg" width="100%" />
             </figure>
+            
+            <figure>
+		      <img src="img/img3.jpg" width="100%" />
+            </figure>
            
         </div> 
         </div>
