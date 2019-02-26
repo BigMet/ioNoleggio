@@ -1,5 +1,5 @@
 function cat(categoria){
-	$.ajax({
+	$.ajax({//QUESTO
 		type:"GET",
 		url:"categoriaA",
 		data:{categ:categoria},
