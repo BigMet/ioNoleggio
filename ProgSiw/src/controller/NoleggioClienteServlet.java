@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -30,9 +31,13 @@ public class NoleggioClienteServlet extends HttpServlet {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 	 	NoleggioDao noleggioDao = factory.getNoleggioDAO();
 	 	List <Noleggio> noleggi = noleggioDao.findAll();
+	 	List<Noleggio> daRimuovere=new LinkedList<Noleggio>();
 	 	for (Noleggio n : noleggi) {
 			if(n.getPrenotazione().getIdCliente()!=(int)session.getAttribute("idutente"))
-				noleggi.remove(n);
+				daRimuovere.add(n);
+		}
+	 	for (Noleggio n : daRimuovere) {
+	 		noleggi.add(n);
 		}
 	 	session.setAttribute("noleggi", noleggi);
 	 	RequestDispatcher disp;
