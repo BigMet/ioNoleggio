@@ -111,12 +111,12 @@ public class NoleggioDaoJDBC implements NoleggioDao{
 	public void update(Noleggio noleggio) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update noleggio SET targa = ? WHERE id=?";
+			String update = "update noleggio SET prenotazione = ?, veicolo = ?, stato = ? WHERE id=?";
 			PreparedStatement statement = connection.prepareStatement(update);
-			statement.setInt(1, noleggio.getId());
-			statement.setInt(2, noleggio.getPrenotazione().getIdPrenotazione());
-			statement.setString(3, noleggio.getVeicolo().getTarga());
-			statement.setString(4, noleggio.getStato());	
+			statement.setInt(1, noleggio.getPrenotazione().getIdPrenotazione());
+			statement.setString(2, noleggio.getVeicolo().getTarga());
+			statement.setString(3, noleggio.getStato());
+			statement.setInt(4,noleggio.getId());
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());

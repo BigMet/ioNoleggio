@@ -19,6 +19,7 @@ import persistence.dao.VeicoloDao;
 /**
  * Servlet implementation class TerminaNoleggioServlet
  */
+@SuppressWarnings("serial")
 @WebServlet("/terminaNoleggio")
 public class TerminaNoleggioServlet extends HttpServlet {
 @Override
@@ -26,15 +27,17 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	String paramTarga= req.getParameter("targave");
 	String disponibile = req.getParameter("disponibile");
 	Boolean presente=false;
+	
 	DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
  	NoleggioDao noleggioDao = factory.getNoleggioDAO();
  	VeicoloDao veicoloDao = factory.getVeicoloDAO();
+ 	
  	List<Noleggio> noleggi=noleggioDao.findAll();
- 	Noleggio temp;
+// 	Noleggio temp = new Noleggio();
  	for (Noleggio n : noleggi) {
 		if(n.getVeicolo().getTarga().equals(paramTarga)) {
 			presente=true;
-			temp=n;
+//			temp=n;
 			break;
 		}
 		
@@ -47,8 +50,8 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
  		
  		else
  			up.setStatoVeicolo("INDISPONIBILE");
- 		temp.setStato("TERMINATO");//you
- 		noleggioDao.update(temp);
+// 		temp.setStato("TERMINATO");//you
+// 		noleggioDao.update(temp);
  		veicoloDao.update(up);
  		out.write("noleggioTerminato");
  			
