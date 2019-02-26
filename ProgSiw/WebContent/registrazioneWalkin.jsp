@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
     
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="style.css" rel="stylesheet">
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">

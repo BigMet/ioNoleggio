@@ -32,12 +32,12 @@
 						Immetti i tuoi dati
 					</span>
 		<div class="wrap-input100 validate-input m-b-20" data-validate="Enter email">
-						<input class="input100" type="text" name="email" placeholder="email">
+						<input class="input100" type="text" name="email" required placeholder="email">
 						<span class="focus-input100"></span>
 					</div>
 		<!-- <input type="password" name="password"/> -->
 		<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
-						<input class="input100" type="password" name="password" placeholder="password">
+						<input class="input100" type="password" name="password" required placeholder="password">
 						<span class="focus-input100"></span>
 					</div>
 		<div class="container-login100-form-btn">

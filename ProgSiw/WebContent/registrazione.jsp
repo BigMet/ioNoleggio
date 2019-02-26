@@ -31,23 +31,26 @@
 						Immetti i tuoi dati
 					</span>
 		<div class="wrap-input100 validate-input m-b-20" data-validate="Inserisci la email">
-						<input class="input100" type="text" name="email" placeholder="email">
+						<input class="input100" type="text" name="email" required placeholder="email">
 						<span class="focus-input100"></span>
 					</div>
 		<div class="wrap-input100 validate-input m-b-20" data-validate="Inserisci il tuo nome">
-						<input class="input100" type="text" name="nome" placeholder="nome">
+						<input class="input100" type="text" name="nome" required placeholder="nome">
 						<span class="focus-input100"></span>
 					</div>
+					
+					
 		<div class="wrap-input100 validate-input m-b-20" data-validate="Inserisci il tuo cognome">
-						<input class="input100" type="text" name="cognome" placeholder="cognome">
+						<input class="input100" type="text" name="cognome" required placeholder="cognome">
 						<span class="focus-input100"></span>
 					</div>
+					
 		<div class="wrap-input100 validate-input m-b-20" data-validate="Inserisci la password">
-						<input class="input100" type="password" name="password" placeholder="password">
+						<input class="input100" type="password" name="password" required placeholder="password">
 						<span class="focus-input100"></span>
 					</div>
 		<div class="wrap-input100 validate-input m-b-20" data-validate="Inserisci il tuo indirizzo">
-						<input class="input100" type="text" name="indirizzo" placeholder="indirizzo">
+						<input class="input100" type="text" name="indirizzo" required placeholder="indirizzo">
 						<span class="focus-input100"></span>
 					</div>
 		<div class="wrap-input100 validate-input m-b-20" data-validate="Inserisci il tuo codice fiscale">
@@ -56,7 +59,7 @@
 					</div>
 
 		<div class="wrap-input100 validate-input m-b-20">
-						<input class="input100" type="date" name="datanascita">
+						<input class="input100" type="date" value="1900-01-01" name="datanascita">
 						<span class="focus-input100"></span>
 					</div>
 		<div class="wrap-input100 validate-input m-b-20" data-validate="Inserisci il numero di telefono">
