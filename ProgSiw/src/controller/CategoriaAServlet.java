@@ -43,13 +43,12 @@ public class CategoriaAServlet extends HttpServlet {
 		
 		Veicolo veicolo = veicoloDao.findOneByCategory(req.getParameter("categ"),dataInizioTmp,dataFineTmp);
 		session.setAttribute("categoria",req.getParameter("categ") );
-		RequestDispatcher disp;
 		PrintWriter out=resp.getWriter();
 		
 		if(veicolo==null) {
 //			System.out.println("nessun veicolo trovato andiamo su un'altra servlet");
-			disp = req.getRequestDispatcher("categoriaB");
-			disp.forward(req, resp);
+			out.write("nonDisponibile");
+
 		}
 		else {
 			session.setAttribute("veicolo", veicolo);
@@ -58,6 +57,7 @@ public class CategoriaAServlet extends HttpServlet {
 				return;
 			}
 //			System.out.println("popup veicolo");
+			
 			int prezzoFinale=(int) ((int) session.getAttribute("giorni")*veicolo.getPrezzo());
 			out.write(String.valueOf(prezzoFinale));
 //			System.out.println(prezzoFinale);

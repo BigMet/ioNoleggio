@@ -7,6 +7,9 @@ function cat(categoria){
 			if(response=="noLog"){
 				window.location="provaLogin.jsp" ;
 			}
+			else if(response=="nonDisponibile")
+				swal("Veicolo non disponibile");
+			else{
 			swal({
 				  title: "Sei Sicuro?",
 				  text: " Verra' effettuata una prenotazione dal: "+document.getElementById("dI").getAttribute("data-value")+ " Al: "+document.getElementById("dF").getAttribute("data-value")+" "+response+ " EURO",
@@ -35,7 +38,7 @@ function cat(categoria){
 				    swal("Perfetto! Hai annullato la prenotazione");
 				  }
 				});
-			
+			}
 		}
 	})
 }
