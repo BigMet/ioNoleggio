@@ -67,6 +67,7 @@ public class cercaPrenotazioneServlet extends HttpServlet {
 		VeicoloDao veicoloDao = factory.getVeicoloDAO();
 		NoleggioDao noleggioDao=factory.getNoleggioDAO();
 		Noleggio noleggio=new Noleggio(prenotazioneDao.findByPrimaryKey(paramIdPrenotazione), veicoloDao.findByPrimaryKey(prenotazioneDao.findByPrimaryKey(paramIdPrenotazione).getTarga()));
+		noleggio.setStato("IN CORSO");
 		Utente temp = utenteDao.findByPrimaryKey(prenotazioneDao.findByPrimaryKey(paramIdPrenotazione).getIdCliente());
 		
 		temp.setNumPatente(paramNumPatente);

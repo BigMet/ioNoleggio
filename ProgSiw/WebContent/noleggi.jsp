@@ -185,7 +185,7 @@
 								<c:if test="${admin}">
 								<th class="column7">Id Utente</th>
 								<th class="column8">Targa</th>
-								
+								<th class="column9">Stato</th>
 								</c:if>
 								
 								
@@ -204,7 +204,7 @@
 										<c:if test="${admin}">
 										<td class="column7">${n.prenotazione.idCliente}</td>
 										<td class="column8">${n.veicolo.targa}</td>
-								
+										<td class="column9">${n.stato}</td>
 									</c:if>
 									</tr>
 								</c:forEach>

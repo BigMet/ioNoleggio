@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.util.Calendar;
 import java.util.Date;
 
+import model.Utente;
 import model.Veicolo;
 import persistence.dao.*;
 
@@ -27,28 +28,35 @@ public class MainJDBC {
 		util.createDatabase();
 		
 		
-//		UtenteDao utenteDao = factory.getUtenteDAO();
-		
-
-
+		UtenteDao utenteDao = factory.getUtenteDAO();
+		Utente admin=new Utente("admin", "admin", "admin", "admin", "admin", "admin", "admin", "admin", date1, "admin", true);
+		Utente utente= new Utente("utente", "Davide", "Perri", "pass", "indirizzo", "codiceFiscale", "numCartaCredito", "numPatente", date1, "numCellulare", false);
+		utenteDao.save(admin);
+		utenteDao.save(utente);
 		// creo i veicoli
 		
 		VeicoloDao veicoloDao = factory.getVeicoloDAO();
-//		
-//		Veicolo veicolo1 = new Veicolo("aaaaaa", "A", "FIAT", "500", date1);
-//		Veicolo veicolo2 = new Veicolo("bbbbbb", "A", "PEUGEOT", "107", date1);
-//		Veicolo veicolo3 = new Veicolo("cccccc", "A", "OPEL", "adam", date1);
-//		Veicolo veicolo4 = new Veicolo("dddddd", "B", "FIAT", "panda", date1);
-//		Veicolo veicolo5 = new Veicolo("eeeeee", "B", "RENAULT", "clio", date1);
-//		Veicolo veicolo6 = new Veicolo("ffffff", "B", "TOYOTA", "yaris", date1);
-//		Veicolo veicolo7 = new Veicolo("gggggg", "C", "FORD", "fiesta", date1);
-//		Veicolo veicolo8 = new Veicolo("hhhhhh", "C", "CITROEN", "c3", date1);
-//		Veicolo veicolo9 = new Veicolo("iiiiii", "D", "AUDI", "A3", date1);
-//		Veicolo veicolo10 = new Veicolo("llllll","D", "VOLKSWAGEN", "golf",date1);
-//		Veicolo veicolo11 = new Veicolo("mmmmmm", "I", "AUDI", "A4", date1);
-//		Veicolo veicolo12 = new Veicolo("nnnnnnn","P", "CITROEN", "picasso",date1);
 		
-		
+		Veicolo veicolo1 = new Veicolo("aaaaaa", "A", "FIAT", "500", date1);
+		Veicolo veicolo2 = new Veicolo("bbbbbb", "A", "PEUGEOT", "107", date1);
+		Veicolo veicolo3 = new Veicolo("cccccc", "A", "OPEL", "adam", date1);
+		Veicolo veicolo4 = new Veicolo("dddddd", "B", "FIAT", "panda", date1);
+		Veicolo veicolo5 = new Veicolo("eeeeee", "B", "RENAULT", "clio", date1);
+		Veicolo veicolo6 = new Veicolo("ffffff", "B", "TOYOTA", "yaris", date1);
+		Veicolo veicolo7 = new Veicolo("gggggg", "C", "FORD", "fiesta", date1);
+		Veicolo veicolo8 = new Veicolo("hhhhhh", "C", "CITROEN", "c3", date1);
+		Veicolo veicolo9 = new Veicolo("iiiiii", "D", "AUDI", "A3", date1);
+		Veicolo veicolo10 = new Veicolo("llllll","D", "VOLKSWAGEN", "golf",date1);
+		Veicolo veicolo11 = new Veicolo("mmmmmm", "I", "AUDI", "A4", date1);
+		Veicolo veicolo12 = new Veicolo("nnnnnnn","P", "CITROEN", "picasso",date1);
+		Veicolo veicolo13 = new Veicolo("nnnnnnn1","I", "AUDI", "c18",date1);
+		Veicolo veicolo14 = new Veicolo("nnnnnnn2","P", "CITROEN", "picasso",date1);
+		Veicolo veicolo15 = new Veicolo("nnnnnnn3","I", "AUDI", "picasso",date1);
+		Veicolo veicolo16 = new Veicolo("nnnnnnn4","O", "CITROEN", "picasso",date1);
+		Veicolo veicolo17 = new Veicolo("nnnnnnn5","I", "AUDI", "picasso",date1);
+		Veicolo veicolo18 = new Veicolo("nnnnnnn6","N", "CITROEN", "picasso",date1);
+		Veicolo veicolo19 = new Veicolo("nnnnnnn7","N", "MERCEDES", "GLK",date1);
+		Veicolo veicolo20 = new Veicolo("nnnnnnn8","N", "FIAT", "panda",date1);
 //		veicoloDao.delete(veicolo1);
 //		veicoloDao.delete(veicolo2);
 //		veicoloDao.delete(veicolo3);
@@ -62,20 +70,26 @@ public class MainJDBC {
 //		veicoloDao.delete(veicolo11);
 //		veicoloDao.delete(veicolo12);
 		
-//		veicoloDao.save(veicolo1);		
-//		veicoloDao.save(veicolo2);	
-//		veicoloDao.save(veicolo3);		
-//		veicoloDao.save(veicolo4);
-//		veicoloDao.save(veicolo5);		
-//		veicoloDao.save(veicolo6);
-//		veicoloDao.save(veicolo7);		
-//		veicoloDao.save(veicolo8);
-//		veicoloDao.save(veicolo9);		
-//		veicoloDao.save(veicolo10);
-//		veicoloDao.save(veicolo11);		
-//		veicoloDao.save(veicolo12);
-		
-		
+		veicoloDao.save(veicolo1);		
+		veicoloDao.save(veicolo2);	
+		veicoloDao.save(veicolo3);		
+		veicoloDao.save(veicolo4);
+		veicoloDao.save(veicolo5);		
+		veicoloDao.save(veicolo6);
+		veicoloDao.save(veicolo7);		
+		veicoloDao.save(veicolo8);
+		veicoloDao.save(veicolo9);		
+		veicoloDao.save(veicolo10);
+		veicoloDao.save(veicolo11);		
+		veicoloDao.save(veicolo12);
+		veicoloDao.save(veicolo13);
+		veicoloDao.save(veicolo14);
+		veicoloDao.save(veicolo15);
+		veicoloDao.save(veicolo16);
+		veicoloDao.save(veicolo17);
+		veicoloDao.save(veicolo18);
+		veicoloDao.save(veicolo19);
+		veicoloDao.save(veicolo20);
 		// fine creazione veicoli
 		
 		

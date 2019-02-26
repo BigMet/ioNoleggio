@@ -33,12 +33,12 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
  	VeicoloDao veicoloDao = factory.getVeicoloDAO();
  	
  	List<Noleggio> noleggi=noleggioDao.findAll();
-// 	Noleggio temp = new Noleggio();
+ 	Noleggio temp = new Noleggio();
  	for (Noleggio n : noleggi) {
+ 		System.out.println(n.getVeicolo().getTarga());
 		if(n.getVeicolo().getTarga().equals(paramTarga)) {
 			presente=true;
-//			temp=n;
-			break;
+			temp=n;
 		}
 		
 	}
@@ -50,8 +50,8 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
  		
  		else
  			up.setStatoVeicolo("INDISPONIBILE");
-// 		temp.setStato("TERMINATO");//you
-// 		noleggioDao.update(temp);
+ 		temp.setStato("TERMINATO");//you
+ 		noleggioDao.update(temp);
  		veicoloDao.update(up);
  		out.write("noleggioTerminato");
  			
