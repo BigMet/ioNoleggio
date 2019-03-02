@@ -48,7 +48,6 @@ session.setAttribute("oggi", oggi);
         <div class="dorne-load"></div>
     </div>
 
-    
 
     <!-- ***** Header Area Start ***** -->
     <header class="header_area" id="header">

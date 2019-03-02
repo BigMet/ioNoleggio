@@ -24,31 +24,33 @@ public class Veicolo {
 		this.dataAcquisto = dataAcquisto;
 		this.statoVeicolo = "DISPONIBILE";
 		
-		if(this.categoria == "a" || this.categoria == "A")
+		System.out.println("categoria in costruttore " + categoria);
+		
+		if(this.categoria.equals("a")|| this.categoria.equals("A"))
 			this.prezzo = 12f;
 		
-		else if(this.categoria == "b" || this.categoria == "B")
+		else if(this.categoria.equals("b")|| this.categoria.equals("B"))
 			this.prezzo = 18f;
 		
-		else if(this.categoria == "c" || this.categoria == "C")
+		else if(this.categoria.equals("c")|| this.categoria.equals("C"))
 			this.prezzo = 22f;
 		
-		else if(this.categoria == "d" || this.categoria == "D")
+		else if(this.categoria.equals("d")|| this.categoria.equals("D"))
 			this.prezzo = 30f;
 		
-		else if(this.categoria == "i" || this.categoria == "I")
+		else if(this.categoria.equals("i")|| this.categoria.equals("I"))
 			this.prezzo = 35f;
 		
-		else if(this.categoria == "p" || this.categoria == "P")
+		else if(this.categoria.equals("p")|| this.categoria.equals("P"))
 			this.prezzo = 33f;
 		
-		else if(this.categoria == "n" || this.categoria == "N")
+		else if(this.categoria.equals("n")|| this.categoria.equals("N"))
 			this.prezzo = 25f;
 		
-		else if(this.categoria == "l" || this.categoria == "L")
+		else if(this.categoria.equals("l")|| this.categoria.equals("L"))
 			this.prezzo = 48f;
 		
-		else if(this.categoria == "o" || this.categoria == "O")
+		else if(this.categoria.equals("o")|| this.categoria.equals("O"))
 			this.prezzo = 40f;
 		
 		
@@ -145,6 +147,38 @@ public class Veicolo {
 		this.statoVeicolo = statoVeicolo;
 	}
 
+	
+	
+//	public float getPrezzoPerCategoria(String categoria) {
+//		if(this.categoria == "a" || this.categoria == "A")
+//			return 12f;
+//		
+//		else if(this.categoria == "b" || this.categoria == "B")
+//			return 18f;
+//		
+//		else if(this.categoria == "c" || this.categoria == "C")
+//			return 22f;
+//		
+//		else if(this.categoria == "d" || this.categoria == "D")
+//			return 30f;
+//		
+//		else if(this.categoria == "i" || this.categoria == "I")
+//			return 35f;
+//		
+//		else if(this.categoria == "p" || this.categoria == "P")
+//			return 33f;
+//		
+//		else if(this.categoria == "n" || this.categoria == "N")
+//			return 25f;
+//		
+//		else if(this.categoria == "l" || this.categoria == "L")
+//			return 48f;
+//		
+//		else if(this.categoria == "o" || this.categoria == "O")
+//			return 40f;
+//		
+//		return -1;
+//	}
 
 
 	@Override

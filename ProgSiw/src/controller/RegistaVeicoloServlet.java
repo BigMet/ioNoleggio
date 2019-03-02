@@ -28,6 +28,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 
 	String paramTarga= req.getParameter("targa");
  	String paramCategoria = req.getParameter("categoria");
+ 	System.out.println(paramCategoria +" quaaaaaaaaaa");
  	String paramData = req.getParameter("dataAcquisto");
  	String paramCasaProduttrice = req.getParameter("casaProduttrice");
  	String paramModello = req.getParameter("modello");
@@ -51,7 +52,8 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
  		Veicolo nuovoVeicolo=null;
  		nuovoVeicolo=veicoloDao.findByPrimaryKey(paramTarga);
  		if(nuovoVeicolo==null) {
- 		nuovoVeicolo = new Veicolo(paramTarga, paramCategoria, paramCasaProduttrice, paramModello, finale);
+ 		nuovoVeicolo = new Veicolo(paramTarga,paramCategoria, paramCasaProduttrice, paramModello, finale);
+ 		
  		veicoloDao.save(nuovoVeicolo);
  		out.write("veicoloAggiunto");
  		}

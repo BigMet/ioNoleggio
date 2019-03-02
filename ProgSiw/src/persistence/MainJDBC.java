@@ -57,6 +57,10 @@ public class MainJDBC {
 		Veicolo veicolo18 = new Veicolo("nnnnnnn6","N", "CITROEN", "picasso",date1);
 		Veicolo veicolo19 = new Veicolo("nnnnnnn7","N", "MERCEDES", "GLK",date1);
 		Veicolo veicolo20 = new Veicolo("nnnnnnn8","N", "FIAT", "panda",date1);
+		Veicolo veicolo21 = new Veicolo("nnnnnnn9","L", "MERCEDES", "classe A",date1);
+		Veicolo veicolo22 = new Veicolo("nnnnnnn10","L", "AUDI", "A 6",date1);
+		
+		
 //		veicoloDao.delete(veicolo1);
 //		veicoloDao.delete(veicolo2);
 //		veicoloDao.delete(veicolo3);
@@ -90,6 +94,8 @@ public class MainJDBC {
 		veicoloDao.save(veicolo18);
 		veicoloDao.save(veicolo19);
 		veicoloDao.save(veicolo20);
+		veicoloDao.save(veicolo21);
+		veicoloDao.save(veicolo22);
 		// fine creazione veicoli
 		
 		
